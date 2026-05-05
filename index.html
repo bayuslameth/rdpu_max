@@ -1,0 +1,1524 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Essential CSS Files -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/flaticon_finto.css">
+    <link rel="stylesheet" href="assets/css/scrollCue.css">
+    <link rel="stylesheet" href="assets/css/remixicon.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <!-- Title & Favicon -->
+    <title>Finto - Fintech, Banking, & Finance HTML Template</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+</head>
+
+<body>
+    <!-- Start Preloader Area -->
+    <div class="preloader-area text-center position-fixed top-0 bottom-0 start-0 end-0" id="preloader">
+        <div class="loader position-absolute start-0 end-0">
+            <div class="wavy position-relative fw-light">
+                <span class="d-inline-block"><img src="assets/images/favicon.png" alt="favicon"></span>
+                <span class="d-inline-block">I</span>
+                <span class="d-inline-block">N</span>
+                <span class="d-inline-block">T</span>
+                <div class="top-header-info">
+                    <div class="top-header-area bg-color-0c3a30">
+                        <div class="container-fluid side-padding">
+                            <div class="row">
+                                <div class="col-lg-8 col-md-12">
+                                    <ul class="left-side">
+                                        <li><span>Solusi Cerdas Alokasi Reksa Dana Pasar Uang</span></li>
+                                        <li><a href="tel:+628112345678"><i class="flaticon-phone-call"></i>
+                                                <b>Bantuan:</b> +62 811 2345 678</a></li>
+                                        <li><a href="mailto:support@optirdpu.id"><i class="flaticon-email-1"></i>
+                                                <b>Email:</b> support@optirdpu.id</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-4 col-md-12">
+                                    <ul class="right-side">
+                                        <li><a href="#">Panduan</a></li>
+                                        <li><a href="#">FAQ</a></li>
+                                        <li>
+                                            <div class="flag position-relative">
+                                                <img class="rounded-circle" src="assets/images/svg/flag-id.svg"
+                                                    alt="image">
+                                                <select class="form-select" aria-label="Default select example">
+                                                    <option selected>Indonesia</option>
+                                                    <option value="1">English</option>
+                                                </select>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <nav class="navbar navbar-expand-lg bg-color-ffffff" id="navbar">
+                        <div class="container-fluid side-padding position-relative">
+                            <a class="navbar-brand logo-brand p-0" href="index.html">
+                                <img src="assets/images/logo-optirdpu.png" alt="OptiRDPU Logo">
+                            </a>
+                            <a class="navbar-toggler" data-bs-toggle="offcanvas" href="#navbarOffcanvas" role="button"
+                                aria-controls="navbarOffcanvas">
+                                <span class="burger-menu">
+                                    <span class="top-bar"></span>
+                                    <span class="middle-bar"></span>
+                                    <span class="bottom-bar"></span>
+                                </span>
+                            </a>
+
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav mx-auto">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="index.html">
+                                            Beranda
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            Fitur Optimasi
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a class="dropdown-item" href="knapsack-kalkulator.html">
+                                                    Kalkulator Alokasi (DP)
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="top-k-filter.html">
+                                                    Penyaring Top RDPU (Greedy)
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="simulasi-return.html">
+                                                    Simulasi Return 1 Tahun
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            Edukasi Investor
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a class="dropdown-item" href="artikel-rdpu.html">
+                                                    Mengenal RDPU
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="panduan-knapsack.html">
+                                                    Cara Kerja Algoritma Kami
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            Informasi
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="tentang-kami.html">Tentang Kami</a></li>
+                                            <li><a class="dropdown-item" href="sumber-data.html">Metodologi & Sumber
+                                                    Data</a></li>
+                                            <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+                                            <li><a class="dropdown-item" href="kebijakan-privasi.html">Kebijakan
+                                                    Privasi</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="kontak.html">
+                                            Kontak
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="others-options">
+                                <ul class="d-flex align-items-center ps-0 mb-0 list-unstyled">
+                                    <li>
+                                        <a href="akun-saya.html" class="search-btn login"><i
+                                                class="ri-account-circle-line"></i> Masuk</a>
+                                    </li>
+                                    <li>
+                                        <a href="knapsack-kalkulator.html" class="default-btn">Mulai Optimasi <i
+                                                class="ri-line-chart-line"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+
+                <div class="mobile-navbar offcanvas offcanvas-end border-0" data-bs-backdrop="static" tabindex="-1"
+                    id="navbarOffcanvas">
+                    <div class="offcanvas-header">
+                        <a href="index.html" class="logo d-inline-block">
+                            <img src="assets/images/white-logo-optirdpu.png" alt="logo">
+                        </a>
+                        <button type="button" class="close-btn bg-transparent position-relative lh-1 p-0 border-0"
+                            data-bs-dismiss="offcanvas" aria-label="close">
+                            <i class="ri-close-fill"></i>
+                        </button>
+                    </div>
+
+                    <div class="offcanvas-body">
+                        <ul class="mobile-menu">
+                            <li class="mobile-menu-list active">
+                                <a href="index.html" class="nav-link">Beranda</a>
+                            </li>
+
+                            <li class="mobile-menu-list">
+                                <a href="javascript:void(0);">Fitur Optimasi</a>
+                                <ul class="mobile-menu-items">
+                                    <li><a class="dropdown-item" href="knapsack-kalkulator.html">Kalkulator Alokasi
+                                            (DP)</a></li>
+                                    <li><a class="dropdown-item" href="top-k-filter.html">Penyaring Top RDPU</a></li>
+                                    <li><a class="dropdown-item" href="simulasi-return.html">Simulasi Return</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="mobile-menu-list">
+                                <a href="javascript:void(0);">Edukasi Investor</a>
+                                <ul class="mobile-menu-items">
+                                    <li><a class="dropdown-item" href="artikel-rdpu.html">Mengenal RDPU</a></li>
+                                    <li><a class="dropdown-item" href="panduan-knapsack.html">Cara Kerja Algoritma</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="mobile-menu-list">
+                                <a href="javascript:void(0);">Informasi</a>
+                                <ul class="mobile-menu-items">
+                                    <li><a class="dropdown-item" href="tentang-kami.html">Tentang Kami</a></li>
+                                    <li><a class="dropdown-item" href="sumber-data.html">Sumber Data</a></li>
+                                    <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="mobile-menu-list without-icon">
+                                <a href="kontak.html" class="nav-link">Kontak</a>
+                            </li>
+                        </ul>
+
+                        <div class="others-options">
+                            <ul class="d-flex align-items-center ps-0 mb-0 list-unstyled">
+                                <li>
+                                    <a href="akun-saya.html" class="search-btn login"><i
+                                            class="ri-account-circle-line"></i> Masuk</a>
+                                </li>
+                                <li>
+                                    <a href="knapsack-kalkulator.html" class="default-btn">Mulai Optimasi <i
+                                            class="ri-line-chart-line"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <span class="d-inline-block">O</span>
+            </div>
+        </div>
+    </div>
+    <!-- End Preloader Area -->
+
+    <div class="top-header-info">
+        <div class="top-header-area bg-color-0c3a30">
+            <div class="container-fluid side-padding">
+                <div class="row">
+                    <div class="col-lg-8 col-md-12">
+                        <ul class="left-side">
+                            <li><span>Solusi Cerdas Alokasi Reksa Dana Pasar Uang</span></li>
+                            <li><a href="tel:+628112345678"><i class="flaticon-phone-call"></i> <b>Bantuan:</b> +62 811
+                                    2345 678</a></li>
+                            <li><a href="mailto:support@optirdpu.id"><i class="flaticon-email-1"></i> <b>Email:</b>
+                                    support@optirdpu.id</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-12">
+                        <ul class="right-side">
+                            <li><a href="#">Panduan</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li>
+                                <div class="flag position-relative">
+                                    <img class="rounded-circle" src="assets/images/svg/flag-id.svg" alt="image">
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Indonesia</option>
+                                        <option value="1">English</option>
+                                    </select>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg bg-color-ffffff" id="navbar">
+            <div class="container-fluid side-padding position-relative">
+                <a class="navbar-brand logo-brand p-0" href="index.html">
+                    <img src="assets/images/logo-optirdpu.png" alt="OptiRDPU Logo">
+                </a>
+                <a class="navbar-toggler" data-bs-toggle="offcanvas" href="#navbarOffcanvas" role="button"
+                    aria-controls="navbarOffcanvas">
+                    <span class="burger-menu">
+                        <span class="top-bar"></span>
+                        <span class="middle-bar"></span>
+                        <span class="bottom-bar"></span>
+                    </span>
+                </a>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">
+                                Beranda
+                            </a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Fitur Optimasi
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="knapsack-kalkulator.html">
+                                        Kalkulator Alokasi (DP)
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="top-k-filter.html">
+                                        Penyaring Top RDPU (Greedy)
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="simulasi-return.html">
+                                        Simulasi Return 1 Tahun
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Edukasi Investor
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="artikel-rdpu.html">
+                                        Mengenal RDPU
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="panduan-knapsack.html">
+                                        Cara Kerja Algoritma Kami
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Informasi
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="tentang-kami.html">Tentang Kami</a></li>
+                                <li><a class="dropdown-item" href="sumber-data.html">Metodologi & Sumber Data</a></li>
+                                <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+                                <li><a class="dropdown-item" href="kebijakan-privasi.html">Kebijakan Privasi</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="kontak.html">
+                                Kontak
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="others-options">
+                    <ul class="d-flex align-items-center ps-0 mb-0 list-unstyled">
+                        <li>
+                            <a href="akun-saya.html" class="search-btn login"><i class="ri-account-circle-line"></i>
+                                Masuk</a>
+                        </li>
+                        <li>
+                            <a href="knapsack-kalkulator.html" class="default-btn">Mulai Optimasi <i
+                                    class="ri-line-chart-line"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="mobile-navbar offcanvas offcanvas-end border-0" data-bs-backdrop="static" tabindex="-1"
+        id="navbarOffcanvas">
+        <div class="offcanvas-header">
+            <a href="index.html" class="logo d-inline-block">
+                <img src="assets/images/white-logo-optirdpu.png" alt="logo">
+            </a>
+            <button type="button" class="close-btn bg-transparent position-relative lh-1 p-0 border-0"
+                data-bs-dismiss="offcanvas" aria-label="close">
+                <i class="ri-close-fill"></i>
+            </button>
+        </div>
+
+        <div class="offcanvas-body">
+            <ul class="mobile-menu">
+                <li class="mobile-menu-list active">
+                    <a href="index.html" class="nav-link">Beranda</a>
+                </li>
+
+                <li class="mobile-menu-list">
+                    <a href="javascript:void(0);">Fitur Optimasi</a>
+                    <ul class="mobile-menu-items">
+                        <li><a class="dropdown-item" href="knapsack-kalkulator.html">Kalkulator Alokasi (DP)</a></li>
+                        <li><a class="dropdown-item" href="top-k-filter.html">Penyaring Top RDPU</a></li>
+                        <li><a class="dropdown-item" href="simulasi-return.html">Simulasi Return</a></li>
+                    </ul>
+                </li>
+
+                <li class="mobile-menu-list">
+                    <a href="javascript:void(0);">Edukasi Investor</a>
+                    <ul class="mobile-menu-items">
+                        <li><a class="dropdown-item" href="artikel-rdpu.html">Mengenal RDPU</a></li>
+                        <li><a class="dropdown-item" href="panduan-knapsack.html">Cara Kerja Algoritma</a></li>
+                    </ul>
+                </li>
+
+                <li class="mobile-menu-list">
+                    <a href="javascript:void(0);">Informasi</a>
+                    <ul class="mobile-menu-items">
+                        <li><a class="dropdown-item" href="tentang-kami.html">Tentang Kami</a></li>
+                        <li><a class="dropdown-item" href="sumber-data.html">Sumber Data</a></li>
+                        <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+                    </ul>
+                </li>
+
+                <li class="mobile-menu-list without-icon">
+                    <a href="kontak.html" class="nav-link">Kontak</a>
+                </li>
+            </ul>
+
+            <div class="others-options">
+                <ul class="d-flex align-items-center ps-0 mb-0 list-unstyled">
+                    <li>
+                        <a href="akun-saya.html" class="search-btn login"><i class="ri-account-circle-line"></i>
+                            Masuk</a>
+                    </li>
+                    <li>
+                        <a href="knapsack-kalkulator.html" class="default-btn">Mulai Optimasi <i
+                                class="ri-line-chart-line"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="search-modal modal fade" id="exampleModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header position-relative">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="popup-form">
+                        <input type="text" class="form-control"
+                            placeholder="Cari produk RDPU (mis: Sucorinvest, Syailendra)...">
+                        <button type="submit" class="popup-btn">
+                            <i class="ri-search-line"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-banner-area overflow-hidden position-relative"
+        style="background-image: url(assets/images/hero/hero-image-1.svg)">
+        <div class="container-fluid side-padding pb-100">
+            <div class="row align-items-center">
+                <div class="col-xl-5 col-lg-12" data-cues="slideInRight" data-duration="800">
+                    <div class="main-banner-content">
+                        <span class="sub-t">SELAMAT DATANG DI OPTIRDPU</span>
+                        <h1>Maksimalkan <span><img src="assets/images/svg/your.svg" alt="image"> Return</span>
+                            Portofolio RDPU Anda</h1>
+                    </div>
+                </div>
+                <div class="col-xl-7 col-lg-12" data-cues="slideInLeft" data-duration="800">
+                    <div class="info">
+                        <p>Alat bantu kuantitatif berbasis algoritma Dynamic Programming (0/1 Knapsack) untuk investor
+                            ritel. Kami secara otomatis merekomendasikan kombinasi produk Reksa Dana Pasar Uang terbaik
+                            untuk mencapai imbal hasil maksimal, tanpa melebihi batas modal yang Anda miliki.</p>
+
+                        <div class="row align-items-center g-4">
+                            <div class="col-lg-5 col-md-5">
+                                <ul class="user bg-color-ffffff radius">
+                                    <li>
+                                        <img class="rounded-circle" src="assets/images/user/user-image-2.jpg"
+                                            alt="image">
+                                    </li>
+                                    <li>
+                                        <img class="rounded-circle" src="assets/images/user/user-image-3.jpg"
+                                            alt="image">
+                                    </li>
+                                    <li>
+                                        <img class="rounded-circle" src="assets/images/user/user-image-1.jpg"
+                                            alt="image">
+                                    </li>
+                                    <li>
+                                        8k+
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <div class="star-review">
+                                    <ul>
+                                        <li>
+                                            <i class="flaticon-star-2"></i>
+                                            <i class="flaticon-star-2"></i>
+                                            <i class="flaticon-star-2"></i>
+                                            <i class="flaticon-star-2"></i>
+                                            <i class="flaticon-star-2"></i>
+                                        </li>
+                                        <li>
+                                            <strong>4.9/5</strong> <span>Rating Algoritma</span>
+                                        </li>
+                                        <li>
+                                            <span>Dari simulasi ribuan kombinasi produk</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-area">
+            <div class="container-fluid side-padding">
+                <div class="row g-4 justify-content-center" data-cues="slideInUp" data-duration="800">
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="banner-card bg-color-ffffff radius-30">
+                            <div class="flex-warp position-relative">
+                                <i>
+                                    <img src="assets/images/svg/grow.svg" alt="image">
+                                </i>
+                                <h3>Alokasi Cerdas Tanpa Tebakan Manual</h3>
+                            </div>
+                            <div class="banner-card-body bg-color-def1ee">
+                                <img src="assets/images/service/service-image-1.png" alt="image">
+                            </div>
+                        </div>
+
+                        <div class="advice-area bg-color-ffffff radius-20">
+                            <div class="container-fluid">
+                                <div class="advice-content">
+                                    <ul>
+                                        <li>Return Maksimal</li>
+                                        <li>Risiko Rendah</li>
+                                        <li>Likuiditas Tinggi</li>
+                                        <li>Diversifikasi Otomatis</li>
+                                        <li>Bebas Pajak</li>
+                                        <li>Return Maksimal</li>
+                                        <li>Risiko Rendah</li>
+                                        <li>Likuiditas Tinggi</li>
+                                        <li>Diversifikasi Otomatis</li>
+                                        <li>Bebas Pajak</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="banner-card part-two bg-color-9edd05 radius-30 position-relative">
+                            <div class="flex-warp position-relative">
+                                <i>
+                                    <img src="assets/images/svg/corporation.svg" alt="image">
+                                </i>
+                                <h3>Optimasi Modal Efisien (Space O(W))</h3>
+                            </div>
+                            <p class="mb-0">Mencegah dana menganggur dengan menemukan rasio modal minimum produk dan
+                                ekspektasi return terbaik.</p>
+                            <div class="banner-card-image">
+                                <div class="text-end">
+                                    <img src="assets/images/service/service-image-2.png" alt="image">
+                                </div>
+                            </div>
+
+                            <div class="total bg-color-ffffff radius">
+                                <h4>Proyeksi Return Tertinggi</h4>
+                                <h5>~ 6.85% / thn</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="banner-card part-three bg-color-ffffff radius-30 position-relative">
+                            <div class="flex-warp position-relative">
+                                <i>
+                                    <img src="assets/images/svg/euro.svg" alt="image">
+                                </i>
+                                <h3>Solusi Ideal untuk Modal Kritis Ritel</h3>
+                            </div>
+                            <div class="banner-image-body">
+                                <div class="text-end">
+                                    <img class="service-image-3" src="assets/images/service/service-image-3.png"
+                                        alt="image">
+                                </div>
+                                <img class="service-image-4" src="assets/images/service/service-image-4.png"
+                                    alt="image">
+                            </div>
+                            <i class="flaticon-star-5 star-5 moveHorizontal_reverse"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="features-area bg-color-0c3a30 ptb-120 overflow-hidden">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xl-6 col-lg-12" data-cues="slideInRight" data-duration="800">
+                    <div class="features-image bg-color-9edd05 radius-30 position-relative">
+                        <img class="feature-image-1" src="assets/images/feature/feature-image-1.png" alt="image">
+                        <img class="feature-image-2 bounce" src="assets/images/feature/feature-image-2.png" alt="image">
+                        <img class="feature-shape-1 moveVertical" src="assets/images/shape/feature-shape-1.png"
+                            alt="image">
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-12" data-cues="slideInLeft" data-duration="800">
+                    <div class="features-content">
+                        <div class="section-heading">
+                            <span class="sub-title">CORE ENGINE</span>
+                            <h2 class="text-white">Teknologi <span><img src="assets/images/svg/lines-1.svg"
+                                        alt="image">Komputasi</span> Tingkat Lanjut</h2>
+                            <p class="text-white">OptiRDPU dirancang dengan performa komputasi tinggi menggunakan Bun &
+                                Hono di sisi backend untuk latensi super rendah, melayani perhitungan matematis kompleks
+                                secara instan.</p>
+                        </div>
+
+                        <ul>
+                            <li class="bg-color-29594b radius-20">
+                                <i class="flaticon-laptop-2"></i>
+                                <h3 class="text-white">Mesin 0/1 Knapsack (Array 1D)</h3>
+                                <p class="text-white">Menggunakan pendekatan bottom-up dengan rolling array optimization
+                                    untuk memaksimalkan return tanpa mengorbankan memori server.</p>
+                            </li>
+                            <li class="bg-color-29594b radius-20">
+                                <i class="flaticon-payment-method"></i>
+                                <h3 class="text-white">Hybrid Greedy-Filtered Failsafe</h3>
+                                <p class="text-white">Otomatis menyaring produk (Top K) berdasarkan rasio
+                                    profit-to-weight ketika dataset membengkak, menjaga sistem tetap responsif.</p>
+                            </li>
+                            <li class="bg-color-29594b radius-20">
+                                <i class="flaticon-businessman-1"></i>
+                                <h3 class="text-white">Integrasi Data RDPU Dinamis</h3>
+                                <p class="text-white">Data batas minimal investasi dan historis return 1 tahun ditarik
+                                    dan disesuaikan dari platform kredibel agar hasil komputasi akurat.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="partner-area pt-120">
+            <div class="container">
+                <div class="title">
+                    <p>MENGGUNAKAN STANDAR DATA DARI PLATFORM & TEKNOLOGI TERKEMUKA</p>
+                </div>
+                <div class="partner-items">
+                    <div class="swiper partner-slide">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="partner-logo">
+                                    <img src="assets/images/partner/partner-logo-1.png" alt="Partner Image">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="partner-logo">
+                                    <img src="assets/images/partner/partner-logo-2.png" alt="Partner Image">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="partner-logo">
+                                    <img src="assets/images/partner/partner-logo-3.png" alt="Partner Image">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="partner-logo">
+                                    <img src="assets/images/partner/partner-logo-4.png" alt="Partner Image">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="partner-logo">
+                                    <img src="assets/images/partner/partner-logo-5.png" alt="Partner Image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="services-area ptb-120 position-relative overflow-hidden">
+        <div class="container left-padding">
+            <div class="row align-items-center">
+                <div class="col-xl-4 col-lg-12" data-cues="slideInLeft" data-duration="800">
+                    <div class="section-heading position-relative mb-0">
+                        <span class="sub-title">FITUR UTAMA KAMI</span>
+                        <h2>Optimasi <span><img src="assets/images/svg/lines-2.svg" alt="">Portofolio</span> Anda</h2>
+                        <p class="mb-5">Sistem rekomendasi alokasi RDPU otomatis menggunakan pendekatan algoritma
+                            tingkat lanjut untuk investor ritel pemula maupun tingkat lanjut.</p>
+
+                        <a href="services.html" class="default-btn two">Lihat Semua Fitur <i
+                                class="ri-arrow-right-up-line"></i></a>
+
+                        <div class="services-btn">
+                            <div class="swiper-button-next">
+                                <i class="ri-arrow-right-line"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                <i class="ri-arrow-left-line"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-8 col-lg-12">
+                    <div class="services-items">
+                        <div class="swiper services-slide">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="services-card position-relative">
+                                        <img class="radius-30" src="assets/images/service/service-image-5.jpg"
+                                            alt="image">
+                                        <div class="services-card-body bg-color-fffaeb radius-30">
+                                            <i class="flaticon-businessman-5 businessman"></i>
+                                            <h3>
+                                                <a href="service-details.html">Kalkulator DP 0/1 Knapsack</a>
+                                            </h3>
+                                            <p class="mb-0">Dapatkan kombinasi RDPU terbaik untuk memaksimalkan return
+                                                tanpa melebihi batas kapasitas modal Anda.</p>
+                                            <a href="service-details.html" class="read-more">Pelajari <i
+                                                    class="ri-arrow-right-up-line"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="services-card position-relative">
+                                        <img class="radius-30" src="assets/images/service/service-image-6.jpg"
+                                            alt="image">
+                                        <div class="services-card-body bg-color-fffaeb radius-30">
+                                            <i class="flaticon-browser-1 businessman"></i>
+                                            <h3>
+                                                <a href="service-details.html">Filter Greedy (Top K)</a>
+                                            </h3>
+                                            <p class="mb-0">Mekanisme penyaringan cerdas berdasarkan rasio
+                                                profit-to-weight agar komputasi tetap ringan dan cepat.</p>
+                                            <a href="service-details.html" class="read-more">Pelajari <i
+                                                    class="ri-arrow-right-up-line"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="services-card position-relative">
+                                        <img class="radius-30" src="assets/images/service/service-image-7.jpg"
+                                            alt="image">
+                                        <div class="services-card-body bg-color-fffaeb radius-30">
+                                            <i class="flaticon-laptop-1 businessman"></i>
+                                            <h3>
+                                                <a href="service-details.html">Simulasi Return Portofolio</a>
+                                            </h3>
+                                            <p class="mb-0">Pantau estimasi total keuntungan, persentase return, dan
+                                                sisa uang menganggur dengan transparan.</p>
+                                            <a href="service-details.html" class="read-more">Pelajari <i
+                                                    class="ri-arrow-right-up-line"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="services-card position-relative">
+                                        <img class="radius-30" src="assets/images/service/service-image-5.jpg"
+                                            alt="image">
+                                        <div class="services-card-body bg-color-fffaeb radius-30">
+                                            <i class="flaticon-businessman-5 businessman"></i>
+                                            <h3>
+                                                <a href="service-details.html">Kalkulator DP 0/1 Knapsack</a>
+                                            </h3>
+                                            <p class="mb-0">Dapatkan kombinasi RDPU terbaik untuk memaksimalkan return
+                                                tanpa melebihi batas kapasitas modal Anda.</p>
+                                            <a href="service-details.html" class="read-more">Pelajari <i
+                                                    class="ri-arrow-right-up-line"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="about-us-area pb-120 overflow-hidden">
+        <div class="container">
+            <div class="about-top mb-5">
+                <div class="row align-items-center" data-cues="slideInUp" data-duration="800">
+                    <div class="col-lg-7 col-md-7">
+                        <div class="section-heading mb-0">
+                            <span class="sub-title">TENTANG SISTEM KAMI</span>
+                            <h2 class="mb-0">Menggabungkan Matematika <span><img src="assets/images/svg/lines-3.svg"
+                                        alt="image">&</span> Investasi</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-5">
+                        <div class="content">
+                            <p>Dengan mengintegrasikan model matematika 0/1 Knapsack Problem, kami membangun alat
+                                kuantitatif yang menghapus elemen tebakan dalam memilih Reksa Dana Pasar Uang.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-info bg-color-edf1ee radius-30">
+                <div class="row g-4">
+                    <div class="col-lg-6" data-cues="slideInRight" data-duration="800">
+                        <div class="about-content">
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="miss-tab" data-bs-toggle="tab"
+                                        data-bs-target="#miss-tab-pane" type="button" role="tab"
+                                        aria-controls="miss-tab-pane" aria-selected="true">Misi Kami</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="qua-tab" data-bs-toggle="tab"
+                                        data-bs-target="#qua-tab-pane" type="button" role="tab"
+                                        aria-controls="qua-tab-pane" aria-selected="false">Teknologi</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="vis-tab" data-bs-toggle="tab"
+                                        data-bs-target="#vis-tab-pane" type="button" role="tab"
+                                        aria-controls="vis-tab-pane" aria-selected="false">Visi</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="top-tab" data-bs-toggle="tab"
+                                        data-bs-target="#top-tab-pane" type="button" role="tab"
+                                        aria-controls="top-tab-pane" aria-selected="false">Keamanan</button>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="miss-tab-pane" role="tabpanel"
+                                    aria-labelledby="miss-tab" tabindex="0">
+                                    <div class="title">
+                                        <h2>Membantu Investor Ritel Berkembang</h2>
+                                        <p class="mb-0">Investor ritel dengan rentang modal kritis (Rp100.000 -
+                                            Rp2.000.000) sering salah memilih kombinasi RDPU. Misi kami adalah
+                                            menyelesaikan masalah inefisiensi alokasi tersebut.</p>
+                                    </div>
+
+                                    <ul class="check">
+                                        <li>
+                                            <i class="ri-check-line"></i>
+                                            Hindari diversifikasi naif (equal-weight)
+                                        </li>
+                                        <li>
+                                            <i class="ri-check-line"></i>
+                                            Memaksimalkan uang yang diinvestasikan
+                                        </li>
+                                        <li>
+                                            <i class="ri-check-line"></i>
+                                            Edukasi literasi investasi berbasis data
+                                        </li>
+                                    </ul>
+
+                                    <a href="tentang-kami.html" class="default-btn mt-5">Lebih Lanjut <i
+                                            class="ri-arrow-right-up-line"></i></a>
+                                </div>
+                                <div class="tab-pane fade" id="qua-tab-pane" role="tabpanel" aria-labelledby="qua-tab"
+                                    tabindex="0">
+
+                                    <div class="title">
+                                        <h2>Arsitektur Performa Tinggi</h2>
+                                        <p class="mb-0">Aplikasi dibangun menggunakan stack modern. Front-end web
+                                            menggunakan Next.js, sedangkan API pemrosesan Knapsack ditangani oleh
+                                            runtime Bun & Hono untuk latensi super rendah.</p>
+                                    </div>
+
+                                    <ul class="check">
+                                        <li><i class="ri-check-line"></i> Space Complexity O(W) melalui 1D Array</li>
+                                        <li><i class="ri-check-line"></i> Hybrid Greedy-DP Failsafe Mechanism</li>
+                                        <li><i class="ri-check-line"></i> Cross-Platform ready via Flutter</li>
+                                    </ul>
+
+                                    <a href="teknologi-kami.html" class="default-btn mt-5">Dokumentasi <i
+                                            class="ri-arrow-right-up-line"></i></a>
+                                </div>
+                                <div class="tab-pane fade" id="vis-tab-pane" role="tabpanel" aria-labelledby="vis-tab"
+                                    tabindex="0">
+                                    <div class="title">
+                                        <h2>Platform Finansial Terukur</h2>
+                                        <p class="mb-0">Visi kami adalah menjadikan OptiRDPU sebagai rujukan utama untuk
+                                            pengambilan keputusan reksa dana yang rasional, bebas dari bias emosional
+                                            pasar.</p>
+                                    </div>
+
+                                    <ul class="check">
+                                        <li><i class="ri-check-line"></i> Ekspansi ke Multi-dimensional Knapsack</li>
+                                        <li><i class="ri-check-line"></i> Multi-period Optimization</li>
+                                        <li><i class="ri-check-line"></i> Integrasi Prediksi AI (LSTM) di masa depan
+                                        </li>
+                                    </ul>
+
+                                    <a href="roadmap.html" class="default-btn mt-5">Roadmap Proyek <i
+                                            class="ri-arrow-right-up-line"></i></a>
+                                </div>
+                                <div class="tab-pane fade" id="top-tab-pane" role="tabpanel" aria-labelledby="top-tab"
+                                    tabindex="0">
+                                    <div class="title">
+                                        <h2>Analitik Murni Tanpa Risiko Ekstra</h2>
+                                        <p class="mb-0">Sistem ini murni bertindak sebagai kalkulator kuantitatif
+                                            (advisor tool). Kami tidak menyimpan dana Anda atau terhubung dengan akses
+                                            bank secara langsung.</p>
+                                    </div>
+
+                                    <ul class="check">
+                                        <li><i class="ri-check-line"></i> Tidak ada pengumpulan data perbankan privasi
+                                        </li>
+                                        <li><i class="ri-check-line"></i> Menggunakan dataset publik terpercaya
+                                            (Scraping/API Bareksa)</li>
+                                        <li><i class="ri-check-line"></i> Transparan dalam penghitungan matematis</li>
+                                    </ul>
+
+                                    <a href="kebijakan-privasi.html" class="default-btn mt-5">Kebijakan Privasi <i
+                                            class="ri-arrow-right-up-line"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6" data-cues="slideInLeft" data-duration="800">
+                        <div class="about-image bg-color-ffffff radius-30">
+                            <img class="about-image-1" src="assets/images/about/about-image-1.jpg" alt="image">
+                            <img class="about-image-2" src="assets/images/about/about-image-1.png" alt="image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="why-choose-us-area mb-5 overflow-hidden">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-12" data-cues="slideInRight" data-duration="800">
+                    <div class="choose-image position-relative">
+                        <img class="radius-30" src="assets/images/about/about-image-2.jpg" alt="image">
+                        <div class="paly-content">
+                            <a data-fslightbox="one" href="https://www.youtube.com/watch?v=Y7cpCDlRfV0"
+                                class="popup-btn">
+                                <i class="flaticon-play-buttton"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12" data-cues="slideInLeft" data-duration="800">
+                    <div class="why-choose-us-content">
+                        <div class="section-heading mb-0">
+                            <span class="sub-title">MENGAPA MEMILIH ALGORITMA KAMI</span>
+                            <h2>Tingkatkan <span><img src="assets/images/svg/lines-1.svg" alt="image">Return</span>
+                                Secara Rasional</h2>
+                            <p class="mb-5">Pengambilan keputusan secara manual seringkali berujung pada alokasi
+                                suboptimal. Dengan OptiRDPU, kami mengubah rumitnya batas minimal pembelian dan variasi
+                                return menjadi persamaan Knapsack 0/1 yang diselesaikan secara presisi oleh mesin.</p>
+                            <a href="knapsack-kalkulator.html" class="default-btn two">Coba Kalkulator Sekarang <i
+                                    class="ri-arrow-right-up-line"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="choose-card-area pb-120">
+        <div class="container">
+            <div class="row g-4 justify-content-center" data-cues="slideInUp" data-duration="800">
+                <div class="col-lg-4 col-md-6">
+                    <div class="choose-card bg-color-fffaeb radius-30">
+                        <i class="flaticon-money-5"></i>
+                        <h3>Alokasi Presisi</h3>
+                        <p>Memaksimalkan potensi imbal hasil portofolio Anda dengan perhitungan matematis yang terukur
+                            dan efisien.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="choose-card bg-color-fffaeb radius-30">
+                        <i class="flaticon-dollar-symbol-1"></i>
+                        <h3>Berbasis Data Aktual</h3>
+                        <p>Menggunakan dataset historis return 1 tahun dan batas minimal pembelian riil dari platform
+                            sekuritas terpercaya.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="choose-card bg-color-fffaeb radius-30">
+                        <i class="flaticon-tablet"></i>
+                        <h3>Ramah Investor Pemula</h3>
+                        <p>Menghapus kebingungan diversifikasi manual, memberikan panduan praktis tanpa perlu tebakan
+                            spekulatif.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="how-it-works-area bg-color-0c3a30 ptb-120">
+        <div class="container">
+            <div class="about-top mb-5">
+                <div class="row align-items-center">
+                    <div class="col-lg-7 col-md-7" data-cues="slideInRight" data-duration="800">
+                        <div class="section-heading mb-0">
+                            <span class="sub-title text-white">CARA KERJA SISTEM</span>
+                            <h2 class="text-white mb-0">Komputasi Rumit, <span><img src="assets/images/svg/lines-1.svg"
+                                        alt="image">Penggunaan</span> Sangat Mudah</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-5" data-cues="slideInLeft" data-duration="800">
+                        <div class="content">
+                            <p class="text-white">Hanya dalam 4 langkah sederhana, algoritma Dynamic Programming kami
+                                akan menyusun portofolio Reksa Dana Pasar Uang terbaik sesuai kapasitas dompet Anda.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-xl-4 col-lg-12">
+                    <div class="works-btn">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="crea-tab" data-bs-toggle="tab"
+                                    data-bs-target="#crea-tab-pane" type="button" role="tab"
+                                    aria-controls="crea-tab-pane" aria-selected="true">1. Input Modal <i
+                                        class="ri-arrow-right-up-line"></i></button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="use-tab" data-bs-toggle="tab"
+                                    data-bs-target="#use-tab-pane" type="button" role="tab" aria-controls="use-tab-pane"
+                                    aria-selected="false">2. Filter & Komputasi <i
+                                        class="ri-arrow-right-up-line"></i></button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="enj-tab" data-bs-toggle="tab"
+                                    data-bs-target="#enj-tab-pane" type="button" role="tab" aria-controls="enj-tab-pane"
+                                    aria-selected="false">3. Terima Rekomendasi <i
+                                        class="ri-arrow-right-up-line"></i></button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="mob-tab" data-bs-toggle="tab"
+                                    data-bs-target="#mob-tab-pane" type="button" role="tab" aria-controls="mob-tab-pane"
+                                    aria-selected="false">4. Eksekusi Pembelian <i
+                                        class="ri-arrow-right-up-line"></i></button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-8 col-lg-12">
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="crea-tab-pane" role="tabpanel"
+                            aria-labelledby="crea-tab" tabindex="0">
+                            <div class="row g-4" data-cues="slideInUp" data-duration="800">
+                                <div class="col-lg-6">
+                                    <div class="single-works-image">
+                                        <img class="radius-30" src="assets/images/about/about-image-3.jpg" alt="image">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="single-works-card bg-color-29594b radius-30">
+                                        <i class="flaticon-payment-method-1 method"></i>
+                                        <h3 class="text-white">Masukkan Kapasitas Modal</h3>
+                                        <p class="text-white">Sistem ini sangat cocok untuk investor ritel dengan
+                                            rentang modal kritis. Masukkan nominal uang yang ingin Anda investasikan
+                                            (misalnya Rp500.000 atau Rp1.000.000) ke dalam kalkulator.</p>
+                                        <a href="knapsack-kalkulator.html" class="default-btn two">Coba Sekarang <i
+                                                class="ri-arrow-right-up-line"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="use-tab-pane" role="tabpanel" aria-labelledby="use-tab"
+                            tabindex="0">
+                            <div class="row" data-cues="slideInUp" data-duration="800">
+                                <div class="col-lg-6">
+                                    <div class="single-works-image">
+                                        <img class="radius-30" src="assets/images/about/about-image-10.jpg" alt="image">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="single-works-card bg-color-29594b radius-30">
+                                        <i class="flaticon-tablet method"></i>
+                                        <h3 class="text-white">Mesin Optimasi Bekerja</h3>
+                                        <p class="text-white">Backend akan menjalankan algoritma Hybrid Greedy-Filtered
+                                            Knapsack secara instan. Menilai ribuan kombinasi bobot (minimal pembelian)
+                                            dan nilai (ekspektasi return) tanpa membebani server.</p>
+                                        <a href="panduan-knapsack.html" class="default-btn two">Pelajari Algoritma <i
+                                                class="ri-arrow-right-up-line"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="enj-tab-pane" role="tabpanel" aria-labelledby="enj-tab"
+                            tabindex="0">
+                            <div class="row" data-cues="slideInUp" data-duration="500">
+                                <div class="col-lg-6">
+                                    <div class="single-works-image">
+                                        <img class="radius-30" src="assets/images/about/about-image-11.jpg" alt="image">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="single-works-card bg-color-29594b radius-30">
+                                        <i class="flaticon-payment-method-2 method"></i>
+                                        <h3 class="text-white">Dapatkan Hasil Spesifik</h3>
+                                        <p class="text-white">Aplikasi akan menampilkan daftar RDPU apa saja yang harus
+                                            dibeli, total proyeksi keuntungan portofolio dalam 1 tahun, serta rincian
+                                            sisa uang yang menganggur.</p>
+                                        <a href="simulasi-return.html" class="default-btn two">Lihat Contoh Hasil <i
+                                                class="ri-arrow-right-up-line"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="mob-tab-pane" role="tabpanel" aria-labelledby="mob-tab"
+                            tabindex="0">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="single-works-image">
+                                        <img class="radius-30" src="assets/images/about/about-image-12.jpg" alt="image">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="single-works-card bg-color-29594b radius-30">
+                                        <i class="flaticon-businessman-4 method"></i>
+                                        <h3 class="text-white">Beli di Platform Pilihan Anda</h3>
+                                        <p class="text-white">Gunakan daftar rekomendasi tersebut sebagai panduan pasti
+                                            saat Anda membuka aplikasi sekuritas (seperti Bareksa, Bibit, atau Ajaib)
+                                            untuk melakukan transaksi secara riil.</p>
+                                        <a href="artikel-rdpu.html" class="default-btn two">Panduan Membeli <i
+                                                class="ri-arrow-right-up-line"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="testimonials-area ptb-120">
+        <div class="container">
+            <div class="about-top mb-5">
+                <div class="row align-items-center">
+                    <div class="col-lg-5 col-md-7" data-cues="slideInRight" data-duration="800">
+                        <div class="section-heading mb-0">
+                            <span class="sub-title">TESTIMONI</span>
+                            <h2 class="mb-0">Apa Kata <span><img src="assets/images/svg/lines-1.svg"
+                                        alt="image">Pengguna</span> Kami</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-5" data-cues="slideInLeft" data-duration="800">
+                        <div class="content">
+                            <p>Sistem ini dirancang khusus untuk mengatasi masalah alokasi investasi sehari-hari.
+                                Berikut adalah pendapat mereka yang telah mencoba efisiensi kalkulator Knapsack kami.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" data-cues="slideInUp" data-duration="800">
+                <div class="col-lg-6 col-md-12">
+                    <div class="testimonials-image bg-color-9edd05 radius-30 position-relative">
+                        <img class="about-image-3" src="assets/images/about/about-image-3.png" alt="image">
+
+                        <img class="feature-shape-1 rotate" src="assets/images/shape/feature-shape-1.png" alt="image">
+                        <img class="feature-shape-2 rotate" src="assets/images/shape/feature-shape-1.png" alt="image">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="testimonials-content">
+                        <div class="testimonials-card bg-color-fffaeb radius-30 mb-4">
+                            <ul>
+                                <li>
+                                    <i class="flaticon-star-2"></i>
+                                    <i class="flaticon-star-2"></i>
+                                    <i class="flaticon-star-2"></i>
+                                    <i class="flaticon-star-2"></i>
+                                    <i class="flaticon-star-2"></i>
+                                </li>
+                            </ul>
+                            <p>“Sangat membantu! Dulu saya sering membagi rata (equal-weight) uang Rp500.000 saya ke 5
+                                produk tanpa strategi. Sekarang kalkulator ini memberi tahu saya kombinasi mana yang
+                                memberikan persentase return tertinggi tanpa sisa saldo berlebih.”</p>
+
+                            <div class="flex-warp d-flex align-items-center justify-content-between">
+                                <div class="d-flex gap-4 align-items-center">
+                                    <img class="user-image-4 rounded-circle" src="assets/images/user/user-image-4.jpg"
+                                        alt="image">
+                                    <div>
+                                        <h3>Budi Santoso</h3>
+                                        <span>Investor Ritel Pemula</span>
+                                    </div>
+                                </div>
+                                <img class="right-quote" src="assets/images/svg/right-quote.svg" alt="image">
+                            </div>
+                        </div>
+
+                        <div class="testimonials-card bg-color-fffaeb radius-30">
+                            <ul>
+                                <li>
+                                    <i class="flaticon-star-2"></i>
+                                    <i class="flaticon-star-2"></i>
+                                    <i class="flaticon-star-2"></i>
+                                    <i class="flaticon-star-2"></i>
+                                    <i class="flaticon-star-2"></i>
+                                </li>
+                            </ul>
+                            <p>“Penerapan model 0/1 Knapsack dengan optimasi memori array 1D di backend menggunakan Bun
+                                sangat cemerlang. Aplikasinya sangat cepat meskipun melakukan komputasi dinamis terhadap
+                                puluhan produk reksa dana secara bersamaan.”</p>
+
+                            <div class="flex-warp d-flex align-items-center justify-content-between">
+                                <div class="d-flex gap-4 align-items-center">
+                                    <img class="user-image-4 rounded-circle" src="assets/images/user/user-image-5.jpg"
+                                        alt="image">
+                                    <div>
+                                        <h3>Rina Andini</h3>
+                                        <span>Tech Enthusiast / Developer</span>
+                                    </div>
+                                </div>
+                                <img class="right-quote" src="assets/images/svg/right-quote.svg" alt="image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="faq-area pb-120 overflow-hidden">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-6 col-md-12" data-cues="slideInRight" data-duration="800">
+                    <div class="question-card bg-color-9edd05 radius-30">
+                        <div class="section-heading">
+                            <span class="sub-title">FAQ</span>
+                            <h2>Pertanyaan <span><img src="assets/images/svg/lines-4.svg" alt="image">Sering</span>
+                                Diajukan</h2>
+                            <p>Temukan jawaban atas pertanyaan umum mengenai cara kerja sistem optimasi portofolio
+                                OptiRDPU kami.</p>
+                        </div>
+                        <img class="radius-30" src="assets/images/blog/blog-image-4.jpg" alt="image">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12" data-cues="slideInLeft" data-duration="800">
+                    <div class="faq-content">
+                        <div class="accordion" id="accordionFAQ">
+                            <div class="accordion-item">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseBang" aria-expanded="false" aria-controls="collapseBang">
+                                    1. Apa itu Reksa Dana Pasar Uang (RDPU)?
+                                </button>
+                                <div id="collapseBang" class="accordion-collapse collapse show"
+                                    data-bs-parent="#accordionFAQ">
+                                    <div class="accordion-body">
+                                        <p>RDPU adalah jenis reksa dana yang menginvestasikan dananya khusus pada
+                                            instrumen pasar uang domestik seperti deposito berjangka dan obligasi di
+                                            bawah 1 tahun. Risikonya sangat rendah dengan return yang stabil, cocok
+                                            untuk investor pemula.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseSunam" aria-expanded="false" aria-controls="collapseSunam">
+                                    2. Bagaimana Algoritma Knapsack bekerja di aplikasi ini?
+                                </button>
+                                <div id="collapseSunam" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionFAQ">
+                                    <div class="accordion-body">
+                                        <p>Aplikasi ini memperlakukan modal Anda sebagai "Kapasitas Ransel" (Capacity),
+                                            batas minimum beli produk sebagai "Bobot" (Weight), dan ekspektasi return
+                                            sebagai "Nilai" (Value). Mesin kami menghitung kombinasi pasti agar nilai
+                                            return maksimal tanpa ransel (modal) jebol.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseDinaj" aria-expanded="false" aria-controls="collapseDinaj">
+                                    3. Mengapa targetnya modal kecil (Rp100rb - Rp2jt)?
+                                </button>
+                                <div id="collapseDinaj" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionFAQ">
+                                    <div class="accordion-body">
+                                        <p>Pada rentang modal ini (modal kritis), variasi minimum pembelian antar produk
+                                            (seperti Rp10.000 vs Rp100.000) sangat mempengaruhi fleksibilitas alokasi.
+                                            Algoritma 0/1 Knapsack terbukti bekerja paling efektif pada batasan ketat
+                                            seperti ini.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapsePage" aria-expanded="false" aria-controls="collapsePage">
+                                    4. Apakah aplikasi ini memotong saldo rekening saya?
+                                </button>
+                                <div id="collapsePage" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionFAQ">
+                                    <div class="accordion-body">
+                                        <p>Tidak. Sistem kami murni bertindak sebagai alat bantu kuantitatif
+                                            (kalkulator) dan tidak terkoneksi dengan perbankan atau mendepositkan uang
+                                            Anda. Anda mengeksekusi transaksinya secara mandiri di platform sekuritas
+                                            favorit Anda.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseLoan" aria-expanded="false" aria-controls="collapseLoan">
+                                    5. Dari mana sumber data produk RDPU diambil?
+                                </button>
+                                <div id="collapseLoan" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionFAQ">
+                                    <div class="accordion-body">
+                                        <p>Data metrik seperti batas minimal investasi dan historikal return 1 tahun
+                                            kami integrasikan dan diperbarui secara berkala dari platform reksa dana
+                                            kredibel di Indonesia (seperti Bareksa) untuk memastikan akurasi
+                                            perhitungan.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseScore" aria-expanded="false" aria-controls="collapseScore">
+                                    6. Mengapa tidak membagi modal sama rata saja (Equal-weight)?
+                                </button>
+                                <div id="collapseScore" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionFAQ">
+                                    <div class="accordion-body">
+                                        <p>Pendekatan equal-weight seringkali mengabaikan batasan minimum pembelian dan
+                                            potensi return produk superior. Knapsack memberikan pembuktian matematis
+                                            bahwa membobotkan alokasi berdasarkan rasio produk akan menghasilkan Total
+                                            Return yang lebih tinggi di akhir periode.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="app-area pb-120 overflow-hidden">
+        <div class="container">
+            <div class="download-area bg-color-edf1ee radius-30">
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-6 col-md-12" data-cues="slideInRight" data-duration="800">
+                        <div class="section-heading mb-0">
+                            <span class="sub-title">UNDUH APLIKASI MOBILE KAMI</span>
+                            <h2>Optimasi Portofolio <span><img src="assets/images/svg/lines-1.svg"
+                                        alt="image">Dalam</span> Genggaman</h2>
+                            <p class="mb-5">Akses mesin Knapsack OptiRDPU kapan saja dan di mana saja. Unduh aplikasi
+                                *cross-platform* kami yang dibangun dengan Flutter untuk pengalaman komputasi yang mulus
+                                di perangkat iOS dan Android.</p>
+
+                            <div class="app-btn">
+                                <a href="https://play.google.com/store" target="_blank" class="me-3">
+                                    <img class="rounded-3" src="assets/images/app/app-image-2.jpg"
+                                        alt="Get it on Google Play">
+                                </a>
+                                <a href="https://www.apple.com/app-store/" target="_blank">
+                                    <img class="rounded-3" src="assets/images/app/app-image-3.jpg"
+                                        alt="Download on the App Store">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12" data-cues="slideInLeft" data-duration="800">
+                        <div class="app-image">
+                            <img class="radius-30" src="assets/images/app/app-image-1.jpg"
+                                alt="OptiRDPU Mobile Interface">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-area bg-color-0c3a30 pt-120">
+        <div class="container">
+            <div class="row" data-cues="slideInUp" data-duration="800">
+                <div class="col-xl-4 col-lg-9 col-md-6">
+                    <div class="footer-weight">
+                        <h2 class="text-white">Berlangganan Newsletter</h2>
+                        <form class="footer-form position-relative">
+                            <input type="email" class="form-control" placeholder="Masukkan Email Anda">
+                            <button type="submit" class="default-btn">Kirim <i
+                                    class="ri-arrow-right-up-line"></i></button>
+                        </form>
+                        <ul class="social">
+                            <li><span>Ikuti Kami:</span></li>
+                            <li>
+                                <a href="https://www.facebook.com/" target="_blank">
+                                    <i class="ri-facebook-fill"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.twitter.com/" target="_blank">
+                                    <i class="ri-twitter-x-line"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/" target="_blank">
+                                    <i class="ri-instagram-line"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/" target="_blank">
+                                    <i class="ri-linkedin-fill"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-4 col-md-6">
+                    <div class="footer-weight part-two ps-5">
+                        <h3 class="text-white">Tautan Cepat</h3>
+
+                        <ul class="service-link">
+                            <li>
+                                <a href="tentang-kami.html">Tentang Kami</a>
+                            </li>
+                            <li>
+                                <a href="artikel-rdpu.html">Edukasi RDPU</a>
+                            </li>
+                            <li>
+                                <a href="panduan-knapsack.html">Cara Kerja Algoritma</a>
+                            </li>
+                            <li>
+                                <a href="sumber-data.html">Sumber Data</a>
+                            </li>
+                            <li>
+                                <a href="faq.html">Tanya Jawab (FAQ)</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="footer-weight part-three ps-5">
+                        <h3 class="text-white">Fitur Kami</h3>
+
+                        <ul class="service-link">
+                            <li>
+                                <a href="knapsack-kalkulator.html">Kalkulator DP 0/1</a>
+                            </li>
+                            <li>
+                                <a href="top-k-filter.html">Filter Top K (Greedy)</a>
+                            </li>
+                            <li>
+                                <a href="simulasi-return.html">Simulasi Return</a>
+                            </li>
+                            <li>
+                                <a href="analisis-portofolio.html">Analisis Portofolio</a>
+                            </li>
+                            <li>
+                                <a href="dokumentasi-api.html">Integrasi API (Bun/Hono)</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="footer-weight ps-5">
+                        <h3 class="text-white">Hubungi Kami</h3>
+
+                        <ul class="get-touch">
+                            <li>
+                                <img src="assets/images/svg/map.svg" alt="image">
+                                <span class="text-white"><b>Lokasi:</b></span>
+                                <a href="#" target="_blank">Bandung, Jawa Barat, Indonesia</a>
+                            </li>
+                            <li>
+                                <img class="phone" src="assets/images/svg/mail.svg" alt="image">
+                                <span class="text-white"><b>Email:</b></span>
+                                <a href="mailto:support@optirdpu.id">support@optirdpu.id</a>
+                            </li>
+                            <li>
+                                <img class="phone" src="assets/images/svg/phone.svg" alt="image">
+                                <span class="text-white"><b>Telepon:</b></span>
+                                <a href="tel:+628112345678">+62 811 2345 678</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright-area bg-color-0c3a30">
+        <div class="container">
+            <div class="copyright-border">
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-4 col-md-6">
+                        <p>© <span>OptiRDPU</span> 2026. Hak Cipta Dilindungi.</p>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="copy-image" data-cues="zoomIn" data-duration="700">
+                            <a href="index.html" class="d-block">
+                                <img src="assets/images/white-logo-optirdpu.png" alt="OptiRDPU Logo">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12">
+                        <ul>
+                            <li>
+                                <a href="kebijakan-privasi.html">Kebijakan Privasi</a>
+                            </li>
+                            <li>
+                                <a href="syarat-ketentuan.html">Syarat & Ketentuan</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="go-top">
+        <i class="ri-arrow-up-fill"></i>
+    </div>
+    <!-- JS Files -->
+    <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/fslightbox.min.js"></script>
+    <script src="assets/js/smooth-scroll.js"></script>
+    <script src="assets/js/scrollCue.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
