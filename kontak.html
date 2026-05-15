@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Essential CSS Files -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/flaticon_finto.css">
+    <link rel="stylesheet" href="assets/css/scrollCue.css">
+    <link rel="stylesheet" href="assets/css/remixicon.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <!-- Title & Favicon -->
+    <title>Optimasi RDPU dengan Dynamic Programming</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+</head>
+
+<body>
+
+    <!-- Start Preloader Area -->
+    <div class="preloader-area text-center position-fixed top-0 bottom-0 start-0 end-0" id="preloader">
+        <div class="loader position-absolute start-0 end-0">
+            <div class="wavy position-relative fw-light">
+                <span class="d-inline-block">O</span>
+            </div>
+        </div>
+    </div>
+    <!-- End Preloader Area -->
+
+    <!-- Start Navbar Area -->
+    <div class="top-header-info">
+        <nav class="navbar navbar-expand-lg bg-color-ffffff" id="navbar">
+
+            <div class="container-fluid side-padding position-relative">
+
+                <!-- Logo -->
+                <a class="navbar-brand logo-brand p-0" href="index.html">
+                    <img src="assets/images/logo-optirdpu.png" alt="OptiRDPU Logo">
+                </a>
+
+                <!-- Mobile Toggle -->
+                <a class="navbar-toggler" data-bs-toggle="offcanvas" href="#navbarOffcanvas" role="button"
+                    aria-controls="navbarOffcanvas">
+
+                    <span class="burger-menu">
+                        <span class="top-bar"></span>
+                        <span class="middle-bar"></span>
+                        <span class="bottom-bar"></span>
+                    </span>
+
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <ul class="navbar-nav mx-auto">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">
+                                Beranda
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="knapsack-kalkulator.html">
+                                Fitur Optimasi
+                            </a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+
+                                Edukasi Investor
+
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+                                <li>
+                                    <a class="dropdown-item" href="artikel-rdpu.html">
+                                        Mengenal RDPU
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a class="dropdown-item" href="panduan-knapsack.html">
+                                        Cara Kerja Algoritma Kami
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </li>
+
+
+                        <!-- ACTIVE MENU -->
+                        <li class="nav-item">
+                            <a class="nav-link active" href="kontak.html">
+                                Kontak
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Right Button -->
+                <div class="others-options">
+
+                    <ul class="d-flex align-items-center ps-0 mb-0 list-unstyled">
+
+                        <li>
+                            <a href="knapsack-kalkulator.html" class="default-btn">
+                                Mulai Optimasi
+                                <i class="ri-line-chart-line"></i>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </nav>
+    </div>
+    <!-- End Navbar Area -->
+
+    <!-- Start Mobile Navbar -->
+    <div class="mobile-navbar offcanvas offcanvas-end border-0" data-bs-backdrop="static" tabindex="-1"
+        id="navbarOffcanvas">
+
+        <div class="offcanvas-header">
+
+            <a href="index.html" class="logo d-inline-block">
+                <img src="assets/images/white-logo-optirdpu.png" alt="logo">
+            </a>
+
+            <button type="button" class="close-btn bg-transparent position-relative lh-1 p-0 border-0"
+                data-bs-dismiss="offcanvas" aria-label="close">
+
+                <i class="ri-close-fill"></i>
+
+            </button>
+
+        </div>
+
+        <div class="offcanvas-body">
+
+            <ul class="mobile-menu">
+
+                <li class="mobile-menu-list">
+                    <a href="index.html" class="nav-link">
+                        Beranda
+                    </a>
+                </li>
+
+                <li class="mobile-menu-list">
+                    <a href="knapsack-kalkulator.html" class="nav-link">
+                        Fitur Optimasi
+                    </a>
+                </li>
+
+                <li class="mobile-menu-list">
+
+                    <a href="javascript:void(0);">
+                        Edukasi Investor
+                    </a>
+
+                    <ul class="mobile-menu-items">
+
+                        <li>
+                            <a class="dropdown-item" href="artikel-rdpu.html">
+                                Mengenal RDPU
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="panduan-knapsack.html">
+                                Cara Kerja Algoritma
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <!-- ACTIVE MOBILE -->
+                <li class="mobile-menu-list without-icon active">
+                    <a href="kontak.html" class="nav-link">
+                        Kontak
+                    </a>
+                </li>
+
+            </ul>
+
+            <div class="others-options">
+
+                <ul class="d-flex align-items-center ps-0 mb-0 list-unstyled">
+
+                    <li>
+                        <a href="akun-saya.html" class="search-btn login">
+                            <i class="ri-account-circle-line"></i>
+                            Masuk
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="knapsack-kalkulator.html" class="default-btn">
+                            Mulai Optimasi
+                            <i class="ri-line-chart-line"></i>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- End Mobile Navbar -->
+
+    <!-- Start Page Banner -->
+    <div class="page-banner-area position-relative overflow-hidden"
+        style="background-image: url(assets/images/hero/hero-image-2.svg)">
+
+        <div class="container">
+
+            <div class="page-banner-content">
+
+                <h1>Kontak Kami</h1>
+
+                <ul>
+                    <li>
+                        <a href="index.html">Beranda</a>
+                    </li>
+                    <li>Kontak</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="shape-image">
+
+            <img class="page-banner-shape-1 moveHorizontal_reverse" src="assets/images/shape/page-banner-shape-1.png"
+                alt="shape">
+
+            <img class="page-banner-shape-2 moveVertical" src="assets/images/shape/page-banner-shape-2.png" alt="shape">
+
+        </div>
+
+    </div>
+    <!-- End Page Banner -->
+
+    <!-- Start Contact Address Area -->
+    <div class="contact-address-area ptb-120 overflow-hidden">
+        <div class="container">
+            <div class="address-container bg-color-0c3a30 radius-20">
+                <div class="contact-warp d-flex align-items-center justify-content-between" data-cues="slideInDown"
+                    data-duration="700">
+                    <div class="location position-relative">
+                        <i class="flaticon-phone-call call-icon"></i>
+                        <span>Hubungi Kami</span>
+                        <a href="tel:+628112345678">
+                            +62 811 2345 678
+                        </a>
+                    </div>
+
+                    <div class="location position-relative">
+                        <i class="flaticon-email-1 call-icon"></i>
+                        <span>Email Support</span>
+                        <a href="mailto:support@optirdpu.id">
+                            support@optirdpu.id
+                        </a>
+                    </div>
+
+                    <div class="location position-relative">
+                        <i class="flaticon-maps-and-flags call-icon"></i>
+                        <span>Lokasi</span>
+                        <a href="#" target="_blank">
+                            Bandung, Jawa Barat, Indonesia
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- End Contact Address Area -->
+
+    <!-- Start Contact Form Area -->
+    <div class="contact-form-area pb-120">
+        <div class="container">
+            <div class="section-title" style="max-width: 850px;">
+                <span class="sub-title two bg-color-9edd05 rounded-pill">
+                    HUBUNGI KAMI
+                </span>
+                <h2>
+                    Konsultasikan Strategi Investasi RDPU Anda Bersama OptiRDPU
+                </h2>
+                <p>
+                    OptiRDPU merupakan aplikasi alat bantu kuantitatif
+                    (robo-advisor sederhana) yang membantu investor ritel
+                    mengambil keputusan investasi Reksa Dana Pasar Uang (RDPU)
+                    secara lebih rasional dan optimal.
+                </p>
+                <p>
+                    Sistem kami menggunakan pendekatan
+                    <strong>0/1 Knapsack Problem</strong>,
+                    <strong>Dynamic Programming</strong>,
+                    dan metode
+                    <strong>Hybrid Greedy-Filtered</strong>
+                    untuk membantu investor menentukan kombinasi produk RDPU
+                    terbaik berdasarkan modal, batas minimal pembelian,
+                    dan estimasi return historis.
+                </p>
+                <p>
+                    Jika Anda memiliki pertanyaan mengenai algoritma optimasi,
+                    simulasi return, metodologi pengolahan data,
+                    ataupun kerja sistem OptiRDPU,
+                    silakan hubungi tim kami melalui form berikut.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Contact Form -->
+                <div class="col-lg-8 col-md-12" data-cues="slideInUp" data-duration="800">
+                    <form class="contact-form bg-color-fffaeb radius-30">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6">
+                                <input type="text" class="form-control" placeholder="Nama Lengkap">
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <input type="email" class="form-control" placeholder="Alamat Email">
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <input type="text" class="form-control" placeholder="Nomor Telepon">
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <input type="text" class="form-control" placeholder="Subjek Pertanyaan">
+                            </div>
+                            <div class="col-lg-12 col-md-12">
+                                <textarea class="form-control textarea"
+                                    placeholder="Tuliskan pertanyaan Anda terkait optimasi RDPU, algoritma knapsack, simulasi return, penggunaan aplikasi, atau kerja sistem OptiRDPU"></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" class="default-btn">
+                            Kirim Pesan
+                            <i class="ri-arrow-right-up-line"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Side -->
+                <div class="col-lg-4 col-md-12" data-cues="slideInDown" data-duration="800">
+                    <div class="contact-map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253840.49011594837!2d107.52762180553653!3d-6.903273917745378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e629f0d09adf%3A0x401e8f1fc28c6d0!2sBandung%2C%20West%20Java!5e0!3m2!1sen!2sid!4v1715850000000!5m2!1sen!2sid"
+                            allowfullscreen="" loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Contact Form Area -->
+
+    <!-- Start Footer Area -->
+    <div class="footer-area bg-color-0c3a30 pt-120">
+        <div class="container">
+            <div class="row" data-cues="slideInUp" data-duration="800">
+                <!-- Newsletter -->
+                <div class="col-xl-4 col-lg-9 col-md-6">
+                    <div class="footer-weight">
+                        <h2 class="text-white">
+                            Berlangganan Newsletter
+                        </h2>
+                        <form class="footer-form position-relative">
+                            <input type="email" class="form-control" placeholder="Masukkan Email Anda">
+                            <button type="submit" class="default-btn">
+                                Kirim
+                                <i class="ri-arrow-right-up-line"></i>
+                            </button>
+                        </form>
+
+                        <ul class="social">
+                            <li>
+                                <span>Ikuti Kami:</span>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/" target="_blank">
+                                    <i class="ri-facebook-fill"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.twitter.com/" target="_blank">
+                                    <i class="ri-twitter-x-line"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/" target="_blank">
+                                    <i class="ri-instagram-line"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/" target="_blank">
+                                    <i class="ri-linkedin-fill"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-xl-2 col-lg-4 col-md-6">
+                    <div class="footer-weight part-two ps-5">
+                        <h3 class="text-white">
+                            Tautan Cepat
+                        </h3>
+                        <ul class="service-link">
+                            <li>
+                                <a href="tentang-kami.html">
+                                    Tentang Kami
+                                </a>
+                            </li>
+                            <li>
+                                <a href="artikel-rdpu.html">
+                                    Edukasi RDPU
+                                </a>
+                            </li>
+                            <li>
+                                <a href="panduan-knapsack.html">
+                                    Cara Kerja Algoritma
+                                </a>
+                            </li>
+                            <li>
+                                <a href="sumber-data.html">
+                                    Sumber Data
+                                </a>
+                            </li>
+                            <li>
+                                <a href="faq.html">
+                                    Tanya Jawab (FAQ)
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Features -->
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="footer-weight part-three ps-5">
+
+                        <h3 class="text-white">
+                            Fitur Kami
+                        </h3>
+
+                        <ul class="service-link">
+
+                            <li>
+                                <a href="knapsack-kalkulator.html">
+                                    Kalkulator DP 0/1
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="top-k-filter.html">
+                                    Filter Top K (Greedy)
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="simulasi-return.html">
+                                    Simulasi Return
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="analisis-portofolio.html">
+                                    Analisis Portofolio
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="dokumentasi-api.html">
+                                    Integrasi API (Bun/Hono)
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                <!-- Contact -->
+                <div class="col-xl-3 col-lg-4 col-md-6">
+
+                    <div class="footer-weight ps-5">
+
+                        <h3 class="text-white">
+                            Hubungi Kami
+                        </h3>
+
+                        <ul class="get-touch">
+
+                            <li>
+
+                                <img src="assets/images/svg/map.svg" alt="image">
+
+                                <span class="text-white">
+                                    <b>Lokasi:</b>
+                                </span>
+
+                                <a href="#" target="_blank">
+                                    Bandung, Jawa Barat, Indonesia
+                                </a>
+
+                            </li>
+
+                            <li>
+
+                                <img class="phone" src="assets/images/svg/mail.svg" alt="image">
+
+                                <span class="text-white">
+                                    <b>Email:</b>
+                                </span>
+
+                                <a href="mailto:support@optirdpu.id">
+                                    support@optirdpu.id
+                                </a>
+
+                            </li>
+
+                            <li>
+
+                                <img class="phone" src="assets/images/svg/phone.svg" alt="image">
+
+                                <span class="text-white">
+                                    <b>Telepon:</b>
+                                </span>
+
+                                <a href="tel:+628112345678">
+                                    +62 811 2345 678
+                                </a>
+
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- End Footer Area -->
+
+    <!-- Start Copyright -->
+    <div class="copyright-area bg-color-0c3a30">
+
+        <div class="container">
+
+            <div class="copyright-border">
+
+                <div class="row g-4 align-items-center">
+
+                    <div class="col-lg-4 col-md-6">
+
+                        <p>
+                            © <span>OptiRDPU</span> 2026.
+                            Hak Cipta Dilindungi.
+                        </p>
+
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+
+                        <div class="copy-image" data-cues="zoomIn" data-duration="700">
+
+                            <a href="index.html" class="d-block">
+
+                                <img src="assets/images/white-logo-optirdpu.png" alt="OptiRDPU Logo">
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-4 col-md-12">
+
+                        <ul>
+
+                            <li>
+                                <a href="kebijakan-privasi.html">
+                                    Kebijakan Privasi
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="syarat-ketentuan.html">
+                                    Syarat & Ketentuan
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- End Copyright -->
+
+    <!-- Go Top -->
+    <div class="go-top">
+        <i class="ri-arrow-up-fill"></i>
+    </div>
+
+    <!-- JS Files -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/fslightbox.min.js"></script>
+    <script src="assets/js/smooth-scroll.js"></script>
+    <script src="assets/js/scrollCue.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>

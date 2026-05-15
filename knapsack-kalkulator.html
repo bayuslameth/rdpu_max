@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Essential CSS Files -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/flaticon_finto.css">
+    <link rel="stylesheet" href="assets/css/scrollCue.css">
+    <link rel="stylesheet" href="assets/css/remixicon.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <!-- Title & Favicon -->
+    <title>Optimasi RDPU dengan Dynamic Programming</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+</head>
+
+<body>
+    <!-- Start Preloader Area -->
+    <div class="preloader-area text-center position-fixed top-0 bottom-0 start-0 end-0" id="preloader">
+        <div class="loader position-absolute start-0 end-0">
+            <div class="wavy position-relative fw-light">
+                <div class="top-header-info">
+                    <nav class="navbar navbar-expand-lg bg-color-ffffff" id="navbar">
+                        <div class="container-fluid side-padding position-relative">
+                            <a class="navbar-brand logo-brand p-0" href="index.html">
+                                <img src="assets/images/logo-optirdpu.png" alt="OptiRDPU Logo">
+                            </a>
+                            <a class="navbar-toggler" data-bs-toggle="offcanvas" href="#navbarOffcanvas" role="button"
+                                aria-controls="navbarOffcanvas">
+                                <span class="burger-menu">
+                                    <span class="top-bar"></span>
+                                    <span class="middle-bar"></span>
+                                    <span class="bottom-bar"></span>
+                                </span>
+                            </a>
+
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav mx-auto">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="index.html">
+                                            Beranda
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="knapsack-kalkulator.html">
+                                            Fitur Optimasi
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            Edukasi Investor
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a class="dropdown-item" href="artikel-rdpu.html">
+                                                    Mengenal RDPU
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="panduan-knapsack.html">
+                                                    Cara Kerja Algoritma Kami
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="kontak.html">
+                                            Kontak
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="others-options">
+                                <ul class="d-flex align-items-center ps-0 mb-0 list-unstyled">
+                                    <li>
+                                        <a href="knapsack-kalkulator.html" class="default-btn">Mulai Optimasi <i
+                                                class="ri-line-chart-line"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+
+                <div class="mobile-navbar offcanvas offcanvas-end border-0" data-bs-backdrop="static" tabindex="-1"
+                    id="navbarOffcanvas">
+                    <div class="offcanvas-header">
+                        <a href="index.html" class="logo d-inline-block">
+                            <img src="assets/images/white-logo-optirdpu.png" alt="logo">
+                        </a>
+                        <button type="button" class="close-btn bg-transparent position-relative lh-1 p-0 border-0"
+                            data-bs-dismiss="offcanvas" aria-label="close">
+                            <i class="ri-close-fill"></i>
+                        </button>
+                    </div>
+
+                    <div class="offcanvas-body">
+                        <ul class="mobile-menu">
+                            <li class="mobile-menu-list">
+                                <a href="index.html" class="nav-link">Beranda</a>
+                            </li>
+
+                            <li class="mobile-menu-list">
+                                <a href="knapsack-kalkulator.html" class="nav-link">Fitur Optimasi</a>
+                            </li>
+
+                            <li class="mobile-menu-list">
+                                <a href="javascript:void(0);">Edukasi Investor</a>
+                                <ul class="mobile-menu-items">
+                                    <li><a class="dropdown-item" href="artikel-rdpu.html">Mengenal RDPU</a></li>
+                                    <li><a class="dropdown-item" href="panduan-knapsack.html">Cara Kerja Algoritma</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="mobile-menu-list without-icon">
+                                <a href="kontak.html" class="nav-link">Kontak</a>
+                            </li>
+                        </ul>
+
+                        <div class="others-options">
+                            <ul class="d-flex align-items-center ps-0 mb-0 list-unstyled">
+                                <li>
+                                    <a href="akun-saya.html" class="search-btn login"><i
+                                            class="ri-account-circle-line"></i> Masuk</a>
+                                </li>
+                                <li>
+                                    <a href="knapsack-kalkulator.html" class="default-btn">Mulai Optimasi <i
+                                            class="ri-line-chart-line"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <span class="d-inline-block">O</span>
+            </div>
+        </div>
+    </div>
+    <!-- End Preloader Area -->
+
+    <div class="top-header-info">
+        <nav class="navbar navbar-expand-lg bg-color-ffffff" id="navbar">
+            <div class="container-fluid side-padding position-relative">
+                <a class="navbar-toggler" data-bs-toggle="offcanvas" href="#navbarOffcanvas" role="button"
+                    aria-controls="navbarOffcanvas">
+                    <span class="burger-menu">
+                        <span class="top-bar"></span>
+                        <span class="middle-bar"></span>
+                        <span class="bottom-bar"></span>
+                    </span>
+                </a>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">
+                                Beranda
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">
+                                Fitur Optimasi
+                            </a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Edukasi Investor
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="artikel-rdpu.html">
+                                        Mengenal RDPU
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="panduan-knapsack.html">
+                                        Cara Kerja Algoritma Kami
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="kontak.html">
+                                Kontak
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="others-options">
+                    <ul class="d-flex align-items-center ps-0 mb-0 list-unstyled">
+                        <li>
+                            <a href="knapsack-kalkulator.html" class="default-btn">Mulai Optimasi <i
+                                    class="ri-line-chart-line"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="mobile-navbar offcanvas offcanvas-end border-0" data-bs-backdrop="static" tabindex="-1"
+        id="navbarOffcanvas">
+        <div class="offcanvas-header">
+            <a href="index.html" class="logo d-inline-block">
+                <img src="assets/images/white-logo-optirdpu.png" alt="logo">
+            </a>
+            <button type="button" class="close-btn bg-transparent position-relative lh-1 p-0 border-0"
+                data-bs-dismiss="offcanvas" aria-label="close">
+                <i class="ri-close-fill"></i>
+            </button>
+        </div>
+
+        <div class="offcanvas-body">
+            <ul class="mobile-menu">
+                <li class="mobile-menu-list">
+                    <a href="index.html" class="nav-link">Beranda</a>
+                </li>
+
+                <li class="mobile-menu-list active">
+                    <a href="knapsack-kalkulator.html" class="nav-link">Fitur Optimasi</a>
+                </li>
+
+                <li class="mobile-menu-list">
+                    <a href="javascript:void(0);">Edukasi Investor</a>
+                    <ul class="mobile-menu-items">
+                        <li><a class="dropdown-item" href="artikel-rdpu.html">Mengenal RDPU</a></li>
+                        <li><a class="dropdown-item" href="panduan-knapsack.html">Cara Kerja Algoritma</a></li>
+                    </ul>
+                </li>
+
+                <li class="mobile-menu-list without-icon">
+                    <a href="kontak.html" class="nav-link">Kontak</a>
+                </li>
+            </ul>
+
+            <div class="others-options">
+                <ul class="d-flex align-items-center ps-0 mb-0 list-unstyled">
+                    <li>
+                        <a href="knapsack-kalkulator.html" class="default-btn">Mulai Optimasi <i
+                                class="ri-line-chart-line"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-banner-area overflow-hidden position-relative"
+        style="background-image: url(assets/images/hero/hero-image-1.svg)">
+        <div class="container-fluid side-padding pb-100 pt-80" id="simulation-container">
+            <!-- Simulator Optimasi Alokasi RDPU -->
+            <div class="row g-4">
+                <!-- LEFT COLUMN: INPUT SECTION -->
+                <div class="col-lg-4">
+                    <div class="card shadow-sm radius-30 border-0 p-5" style="background-color: #ffffff;">
+                        <h4 class="mb-4" style="color: #0c3a30; font-weight: 600;">
+                            <i class="ri-settings-3-line"></i> Pengaturan Optimasi
+                        </h4>
+
+                        <!-- Modal Input -->
+                        <div class="mb-4">
+                            <label class="form-label fw-600" style="color: #0c3a30;">Total Modal Investasi (Rp)</label>
+                            <input type="number" id="modalInput" class="form-control" placeholder="Contoh: 1000000"
+                                min="1" value="1000000"
+                                style="border-radius: 12px; border: 2px solid #e8f0ed; padding: 12px;">
+                        </div>
+
+                        <!-- File Upload -->
+                        <div class="mb-4">
+                            <label class="form-label fw-600" style="color: #0c3a30;">Upload Data RDPU (CSV)</label>
+                            <input type="file" id="csvFile" class="form-control" accept=".csv"
+                                style="border-radius: 12px; border: 2px solid #e8f0ed; padding: 12px;">
+                            <small class="text-muted d-block mt-2">Format: Nama_RDPU, Min_Pembelian, Return_Rp</small>
+                        </div>
+
+                        <!-- Dummy Data Button -->
+                        <button id="dummyDataBtn" class="btn btn-outline-primary w-100 mb-3"
+                            style="border-radius: 12px; border: 2px solid #0c3a30; color: #0c3a30; font-weight: 600; padding: 12px;">
+                            <i class="ri-database-2-line"></i> Gunakan Data Dummy
+                        </button>
+
+                        <!-- Optimize Button -->
+                        <button id="optimizeBtn" class="default-btn w-100 mb-3"
+                            style="border-radius: 12px; padding: 12px; font-weight: 600;">
+                            <i class="ri-flashlight-line"></i> Optimasi Sekarang
+                        </button>
+
+                        <!-- Alert Area -->
+                        <div id="alertArea"></div>
+                    </div>
+                </div>
+
+                <!-- RIGHT COLUMN: RESULTS SECTION -->
+                <div class="col-lg-8">
+                    <!-- Summary Cards -->
+                    <div class="row g-3 mb-5">
+                        <!-- Card 1: Total Modal Terpakai -->
+                        <div class="col-md-4">
+                            <div class="card shadow-sm radius-30 border-0 p-4"
+                                style="background: linear-gradient(135deg, #0c3a30 0%, #0d4a3a 100%);">
+                                <div style="text-align: center; color: white;">
+                                    <p class="mb-2" style="font-size: 14px; opacity: 0.9;">Total Modal Terpakai</p>
+                                    <h5 id="usedCapacityCard" style="font-size: 20px; font-weight: 700;">Rp 0</h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2: Sisa Modal Menganggur -->
+                        <div class="col-md-4">
+                            <div class="card shadow-sm radius-30 border-0 p-4"
+                                style="background: linear-gradient(135deg, #ff6b35 0%, #ff8552 100%);">
+                                <div style="text-align: center; color: white;">
+                                    <p class="mb-2" style="font-size: 14px; opacity: 0.9;">Sisa Modal Menganggur</p>
+                                    <h5 id="remainingCapacityCard" style="font-size: 20px; font-weight: 700;">Rp 0</h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3: Total Proyeksi Return -->
+                        <div class="col-md-4">
+                            <div class="card shadow-sm radius-30 border-0 p-4"
+                                style="background: linear-gradient(135deg, #28a745 0%, #32c754 100%);">
+                                <div style="text-align: center; color: white;">
+                                    <p class="mb-2" style="font-size: 14px; opacity: 0.9;">Total Proyeksi Return</p>
+                                    <h5 id="totalReturnCard" style="font-size: 20px; font-weight: 700;">Rp 0</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Data Table -->
+                    <div class="card shadow-sm radius-30 border-0 p-4 mb-4" style="background-color: #ffffff;">
+                        <h5 class="mb-3" style="color: #0c3a30; font-weight: 600;">
+                            <i class="ri-table-2"></i> Dataset RDPU Tersedia
+                        </h5>
+                        <div style="overflow-x: auto;">
+                            <table class="table table-hover mb-0" style="font-size: 14px;">
+                                <thead style="background-color: #f0f5f3;">
+                                    <tr>
+                                        <th style="color: #0c3a30; font-weight: 600;">Nama Produk</th>
+                                        <th style="color: #0c3a30; font-weight: 600; text-align: right;">Min. Beli (Rp)
+                                        </th>
+                                        <th style="color: #0c3a30; font-weight: 600; text-align: right;">Return (Rp)
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody id="dataTableBody">
+                                    <tr>
+                                        <td colspan="3" class="text-center text-muted py-3">Silakan upload CSV atau
+                                            gunakan data dummy</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Recommendations Table -->
+                    <div class="card shadow-sm radius-30 border-0 p-4"
+                        style="background-color: #ffffff; border-left: 5px solid #28a745;">
+                        <h5 class="mb-3" style="color: #0c3a30; font-weight: 600;">
+                            <i class="ri-check-double-line"></i> Rekomendasi RDPU Terpilih
+                        </h5>
+                        <div style="overflow-x: auto;">
+                            <table class="table table-hover mb-0" style="font-size: 14px;">
+                                <thead style="background-color: #f0f5f3;">
+                                    <tr>
+                                        <th style="color: #0c3a30; font-weight: 600;">Nama Produk</th>
+                                        <th style="color: #0c3a30; font-weight: 600; text-align: right;">Jumlah (Rp)
+                                        </th>
+                                        <th style="color: #0c3a30; font-weight: 600; text-align: right;">Return (Rp)
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody id="recommendationTableBody">
+                                    <tr>
+                                        <td colspan="3" class="text-center text-muted py-3">Hasil optimasi akan
+                                            ditampilkan di sini</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer-area bg-color-0c3a30 pt-120">
+        <div class="container">
+            <div class="row" data-cues="slideInUp" data-duration="800">
+                <div class="col-xl-4 col-lg-9 col-md-6">
+                    <div class="footer-weight">
+                        <h2 class="text-white">Berlangganan Newsletter</h2>
+                        <form class="footer-form position-relative">
+                            <input type="email" class="form-control" placeholder="Masukkan Email Anda">
+                            <button type="submit" class="default-btn">Kirim <i
+                                    class="ri-arrow-right-up-line"></i></button>
+                        </form>
+                        <ul class="social">
+                            <li><span>Ikuti Kami:</span></li>
+                            <li>
+                                <a href="https://www.facebook.com/" target="_blank">
+                                    <i class="ri-facebook-fill"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.twitter.com/" target="_blank">
+                                    <i class="ri-twitter-x-line"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/" target="_blank">
+                                    <i class="ri-instagram-line"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/" target="_blank">
+                                    <i class="ri-linkedin-fill"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-4 col-md-6">
+                    <div class="footer-weight part-two ps-5">
+                        <h3 class="text-white">Tautan Cepat</h3>
+
+                        <ul class="service-link">
+                            <li>
+                                <a href="tentang-kami.html">Tentang Kami</a>
+                            </li>
+                            <li>
+                                <a href="artikel-rdpu.html">Edukasi RDPU</a>
+                            </li>
+                            <li>
+                                <a href="panduan-knapsack.html">Cara Kerja Algoritma</a>
+                            </li>
+                            <li>
+                                <a href="sumber-data.html">Sumber Data</a>
+                            </li>
+                            <li>
+                                <a href="faq.html">Tanya Jawab (FAQ)</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="footer-weight part-three ps-5">
+                        <h3 class="text-white">Fitur Kami</h3>
+
+                        <ul class="service-link">
+                            <li>
+                                <a href="knapsack-kalkulator.html">Kalkulator DP 0/1</a>
+                            </li>
+                            <li>
+                                <a href="top-k-filter.html">Filter Top K (Greedy)</a>
+                            </li>
+                            <li>
+                                <a href="simulasi-return.html">Simulasi Return</a>
+                            </li>
+                            <li>
+                                <a href="analisis-portofolio.html">Analisis Portofolio</a>
+                            </li>
+                            <li>
+                                <a href="dokumentasi-api.html">Integrasi API (Bun/Hono)</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="footer-weight ps-5">
+                        <h3 class="text-white">Hubungi Kami</h3>
+
+                        <ul class="get-touch">
+                            <li>
+                                <img src="assets/images/svg/map.svg" alt="image">
+                                <span class="text-white"><b>Lokasi:</b></span>
+                                <a href="#" target="_blank">Bandung, Jawa Barat, Indonesia</a>
+                            </li>
+                            <li>
+                                <img class="phone" src="assets/images/svg/mail.svg" alt="image">
+                                <span class="text-white"><b>Email:</b></span>
+                                <a href="mailto:support@optirdpu.id">support@optirdpu.id</a>
+                            </li>
+                            <li>
+                                <img class="phone" src="assets/images/svg/phone.svg" alt="image">
+                                <span class="text-white"><b>Telepon:</b></span>
+                                <a href="tel:+628112345678">+62 811 2345 678</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="copyright-area bg-color-0c3a30">
+        <div class="container">
+            <div class="copyright-border">
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-4 col-md-6">
+                        <p>© <span>OptiRDPU</span> 2026. Hak Cipta Dilindungi.</p>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="copy-image" data-cues="zoomIn" data-duration="700">
+                            <a href="index.html" class="d-block">
+                                <img src="assets/images/white-logo-optirdpu.png" alt="OptiRDPU Logo">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12">
+                        <ul>
+                            <li>
+                                <a href="kebijakan-privasi.html">Kebijakan Privasi</a>
+                            </li>
+                            <li>
+                                <a href="syarat-ketentuan.html">Syarat & Ketentuan</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="go-top">
+        <i class="ri-arrow-up-fill"></i>
+    </div>
+    <!-- JS Files -->
+    <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/fslightbox.min.js"></script>
+    <script src="assets/js/smooth-scroll.js"></script>
+    <script src="assets/js/scrollCue.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+    <!-- Simulator Optimasi RDPU Script -->
+    <script>
+        // ========== UTILITY FUNCTIONS ==========
+
+        /**
+         * Calculate GCD of two numbers
+         * @param {number} a - First number
+         * @param {number} b - Second number
+         * @returns {number} - GCD value
+         */
+        function gcd(a, b) {
+            return b === 0 ? a : gcd(b, a % b);
+        }
+
+        /**
+         * Calculate GCD of array of numbers
+         * @param {number[]} arr - Array of numbers
+         * @returns {number} - GCD of all numbers
+         */
+        function gcdArray(arr) {
+            if (arr.length === 0) return 1;
+            return arr.reduce((a, b) => gcd(a, b));
+        }
+
+        /**
+         * Format number to Indonesian Rupiah format
+         * @param {number} value - The value to format
+         * @returns {string} - Formatted Rupiah string
+         */
+        function formatRupiah(value) {
+            return new Intl.NumberFormat('id-ID', {
+                style: 'currency',
+                currency: 'IDR',
+                minimumFractionDigits: 0,
+                maximumFractionDigits: 0
+            }).format(value);
+        }
+
+        /**
+         * Parse a single CSV row respecting quoted fields
+         * Handles commas inside quotes correctly
+         * @param {string} str - CSV row string
+         * @returns {string[]} - Array of parsed fields
+         */
+        function parseCSVRow(str) {
+            let result = [];
+            let cur = '';
+            let inQuotes = false;
+
+            for (let i = 0; i < str.length; i++) {
+                if (str[i] === '"') {
+                    inQuotes = !inQuotes;
+                } else if (str[i] === ',' && !inQuotes) {
+                    result.push(cur);
+                    cur = '';
+                } else {
+                    cur += str[i];
+                }
+            }
+            result.push(cur);
+            return result;
+        }
+
+        /**
+         * Parse CSV file content with support for rdpu_dataset.csv format
+         * Handles both standard format and Bareksa-specific format
+         * @param {string} csvContent - Raw CSV content
+         * @returns {object[]} - Array of parsed items with {name, weight, value}
+         */
+        function parseCSV(csvContent) {
+            const lines = csvContent.trim().split('\n');
+            if (lines.length < 2) return [];
+
+            // Parse header row
+            const header = parseCSVRow(lines[0].trim());
+            const isBareksaFormat = header.includes('fund_name') &&
+                header.includes('min_buy') &&
+                header.includes('return_1y_pct');
+
+            // Determine column indices
+            let nameIdx = isBareksaFormat ? header.indexOf('fund_name') : 0;
+            let minBuyIdx = isBareksaFormat ? header.indexOf('min_buy') : 1;
+            let returnIdx = isBareksaFormat ? header.indexOf('return_1y_pct') : 2;
+
+            const items = [];
+
+            // Parse data rows
+            for (let i = 1; i < lines.length; i++) {
+                const line = lines[i].trim();
+                if (!line) continue;
+
+                const parts = parseCSVRow(line);
+
+                // Validate we have enough columns
+                if (parts.length > Math.max(nameIdx, minBuyIdx, returnIdx)) {
+                    const name = parts[nameIdx].replace(/^"|"$/g, '').trim();
+                    let weight = 0;
+                    let value = 0;
+
+                    if (isBareksaFormat) {
+                        // Bareksa format: min_buy = "IDR 10.000,00", return_1y_pct = 8.5
+                        // Extract numeric value from "IDR 10.000,00"
+                        let minBuyStr = parts[minBuyIdx].replace(/[^0-9.,]/g, '');
+                        // Replace European decimal format (10.000,00) with US format (10000.00)
+                        minBuyStr = minBuyStr.replace(/\./g, '').replace(/,/g, '.');
+                        weight = Math.round(parseFloat(minBuyStr)) || 0;
+
+                        // Return percentage: calculate absolute return value
+                        let returnPct = parseFloat(parts[returnIdx]) || 0;
+                        value = Math.round(weight * (returnPct / 100));
+                    } else {
+                        // Standard format: simple integer parsing
+                        weight = parseInt(parts[minBuyIdx].replace(/\D/g, '')) || 0;
+                        value = parseInt(parts[returnIdx].replace(/\D/g, '')) || 0;
+                    }
+
+                    // Add only valid items
+                    if (weight > 0) {
+                        items.push({ name, weight, value });
+                    }
+                }
+            } // --> Kurung kurawal penutup untuk loop for ditambahkan
+
+            return items;
+        } // --> Kurung kurawal penutup untuk fungsi parseCSV ditambahkan
+
+
+        /**
+         * Show alert message
+         * @param {string} message - Alert message
+         * @param {string} type - Alert type (success, danger, warning, info)
+         */
+        function showAlert(message, type = 'info') {
+            const alertArea = document.getElementById('alertArea');
+            const alertHTML = `
+        <div class="alert alert-${type} alert-dismissible fade show" role="alert" style="border-radius: 12px; margin-top: 12px;">
+            <i class="ri-information-line"></i> ${message}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    `;
+            alertArea.innerHTML = alertHTML;
+
+            // Auto-dismiss after 5 seconds
+            setTimeout(() => {
+                const alert = alertArea.querySelector('.alert');
+                if (alert) {
+                    const bsAlert = new bootstrap.Alert(alert);
+                    bsAlert.close();
+                }
+            }, 5000);
+        }
+
+        // ========== KNAPSACK ALGORITHM (2D DP WITH GCD SCALING) ==========
+
+        /**
+         * 0/1 Knapsack Problem using Dynamic Programming (2D Bottom-Up with GCD Scaling)
+         * Implements the classic 2D DP approach with memory optimization via GCD scaling
+         * @param {number} capacity - Total capital/weight limit (in Rupiah)
+         * @param {object[]} items - Array of items with {name, weight, value}
+         * @returns {object} - Result object with selectedItems, totalWeight, totalValue
+         */
+        function knapsack01(capacity, items) {
+            if (capacity <= 0 || items.length === 0) {
+                return { selectedItems: [], totalWeight: 0, totalValue: 0 };
+            }
+
+            // Extract weights and values
+            const weights = items.map(item => item.weight);
+            const values = items.map(item => item.value);
+            const n = items.length;
+
+            // GCD Scaling Optimization: Reduce array size by finding GCD
+            const scaleFactor = gcdArray([...weights, capacity]);
+            const scaledCapacity = Math.floor(capacity / scaleFactor);
+            const scaledWeights = weights.map(w => Math.floor(w / scaleFactor));
+
+            // Create 2D DP table: dp[i][w] = max value using first i items with capacity w
+            const dp = Array.from({ length: n + 1 }, () =>
+                new Array(scaledCapacity + 1).fill(0)
+            );
+
+            // Fill DP table (bottom-up)
+            for (let i = 1; i <= n; i++) {
+                const w_i = scaledWeights[i - 1];
+                const v_i = values[i - 1];
+
+                for (let w = 0; w <= scaledCapacity; w++) {
+                    if (w >= w_i) {
+                        // Take max of: exclude item i, or include item i
+                        dp[i][w] = Math.max(
+                            dp[i - 1][w],
+                            dp[i - 1][w - w_i] + v_i
+                        );
+                    } else {
+                        // Cannot include item i (capacity too small)
+                        dp[i][w] = dp[i - 1][w];
+                    }
+                }
+            }
+
+            // Backtrack to find selected items
+            const selectedItems = [];
+            let w_curr = scaledCapacity;
+
+            for (let i = n; i > 0 && w_curr > 0; i--) {
+                // If value changed from dp[i-1] to dp[i], item i was selected
+                if (dp[i][w_curr] !== dp[i - 1][w_curr]) {
+                    selectedItems.push(items[i - 1]);
+                    w_curr -= scaledWeights[i - 1];
+                }
+            }
+
+            selectedItems.reverse();
+
+            // Calculate actual total weight and value
+            const totalWeight = selectedItems.reduce((sum, item) => sum + item.weight, 0);
+            const totalValue = selectedItems.reduce((sum, item) => sum + item.value, 0);
+
+            return {
+                selectedItems,
+                totalWeight,
+                totalValue
+            };
+        }
+
+        // ========== STATE MANAGEMENT ==========
+
+        let globalData = {
+            items: [],
+            optimizationResult: null
+        };
+
+        // ========== UI FUNCTIONS ==========
+
+        /**
+         * Update data table display
+         * @param {object[]} items - Items to display
+         */
+        function updateDataTable(items) {
+            const tableBody = document.getElementById('dataTableBody');
+
+            if (items.length === 0) {
+                tableBody.innerHTML = `
+        <tr>
+            <td colspan="3" class="text-center text-muted py-3">Silakan upload CSV atau gunakan data dummy</td>
+        </tr>
+    `;
+                return;
+            }
+
+            tableBody.innerHTML = items.map((item, idx) => `
+        <tr>
+            <td>${item.name}</td>
+            <td style="text-align: right;">${formatRupiah(item.weight)}</td>
+            <td style="text-align: right;">${formatRupiah(item.value)}</td>
+        </tr>
+    `).join('');
+        }
+
+        /**
+         * Update recommendation table display
+         * @param {object[]} selectedItems - Selected items from knapsack
+         * @param {number} totalWeight - Total weight used
+         * @param {number} totalValue - Total value/return
+         */
+        function updateRecommendationTable(selectedItems, totalWeight, totalValue) {
+            const tableBody = document.getElementById('recommendationTableBody');
+
+            if (selectedItems.length === 0) {
+                tableBody.innerHTML = `
+        <tr>
+            <td colspan="3" class="text-center text-muted py-3">Tidak ada rekomendasi tersedia</td>
+        </tr>
+    `;
+                return;
+            }
+
+            let html = selectedItems.map((item, idx) => `
+        <tr>
+            <td><strong>${item.name}</strong></td>
+            <td style="text-align: right;">${formatRupiah(item.weight)}</td>
+            <td style="text-align: right;"><span style="color: #28a745; font-weight: 600;">${formatRupiah(item.value)}</span></td>
+        </tr>
+    `).join('');
+
+            // Add total row
+            html += `
+        <tr style="background-color: #f0f5f3; font-weight: 600;">
+            <td><strong>TOTAL</strong></td>
+            <td style="text-align: right;"><strong>${formatRupiah(totalWeight)}</strong></td>
+            <td style="text-align: right;"><strong style="color: #28a745;">${formatRupiah(totalValue)}</strong></td>
+        </tr>
+    `;
+
+            tableBody.innerHTML = html;
+        }
+
+        /**
+         * Update summary cards
+         * @param {number} capacity - Total capital
+         * @param {number} usedCapacity - Used capital
+         * @param {number} totalValue - Total return
+         */
+        function updateSummaryCards(capacity, usedCapacity, totalValue) {
+            const remaining = capacity - usedCapacity;
+
+            document.getElementById('usedCapacityCard').textContent = formatRupiah(usedCapacity);
+            document.getElementById('remainingCapacityCard').textContent = formatRupiah(remaining);
+            document.getElementById('totalReturnCard').textContent = formatRupiah(totalValue);
+        }
+
+        /**
+         * Reset all displays
+         */
+        function resetDisplays() {
+            document.getElementById('dataTableBody').innerHTML = `
+        <tr>
+            <td colspan="3" class="text-center text-muted py-3">Silakan upload CSV atau gunakan data dummy</td>
+        </tr>
+    `;
+            document.getElementById('recommendationTableBody').innerHTML = `
+        <tr>
+            <td colspan="3" class="text-center text-muted py-3">Hasil optimasi akan ditampilkan di sini</td>
+        </tr>
+    `;
+            updateSummaryCards(0, 0, 0);
+        }
+
+        // ========== EVENT LISTENERS ==========
+
+        // Dummy Data Button
+        document.getElementById('dummyDataBtn').addEventListener('click', function () {
+            globalData.items = [
+                { name: "Sucorinvest Money Market", weight: 100000, value: 6500 },
+                { name: "Syailendra Dana Kas", weight: 50000, value: 3100 },
+                { name: "Mandiri Investa", weight: 50000, value: 2900 },
+                { name: "Batavia Dana Kas", weight: 100000, value: 6200 },
+                { name: "Bahana Dana Likuid", weight: 100000, value: 6100 }
+            ];
+
+            updateDataTable(globalData.items);
+            showAlert('Data dummy berhasil dimuat! Siap untuk dioptimasi.', 'success');
+        });
+
+        // CSV File Upload
+        document.getElementById('csvFile').addEventListener('change', function (event) {
+            const file = event.target.files[0];
+
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                try {
+                    const csvContent = e.target.result;
+                    globalData.items = parseCSV(csvContent);
+
+                    if (globalData.items.length === 0) {
+                        showAlert('CSV tidak valid atau tidak ada data yang dapat diproses.', 'danger');
+                        return;
+                    }
+
+                    updateDataTable(globalData.items);
+                    showAlert(`${globalData.items.length} produk berhasil dimuat dari CSV!`, 'success');
+                } catch (error) {
+                    showAlert('Terjadi kesalahan saat membaca CSV: ' + error.message, 'danger');
+                    console.error(error);
+                }
+            };
+
+            reader.readAsText(file);
+        });
+
+        // Optimize Button
+        document.getElementById('optimizeBtn').addEventListener('click', function () {
+            const modalInput = document.getElementById('modalInput');
+            const capacity = parseInt(modalInput.value);
+
+            // Validation
+            if (!capacity || capacity <= 0) {
+                showAlert('Masukkan modal investasi yang valid (> 0).', 'warning');
+                return;
+            }
+
+            if (globalData.items.length === 0) {
+                showAlert('Silakan upload CSV atau gunakan data dummy terlebih dahulu.', 'warning');
+                return;
+            }
+
+            try {
+                // Run knapsack algorithm
+                const result = knapsack01(capacity, globalData.items);
+
+                // Update global state
+                globalData.optimizationResult = result;
+
+                // Update UI
+                updateRecommendationTable(result.selectedItems, result.totalWeight, result.totalValue);
+                updateSummaryCards(capacity, result.totalWeight, result.totalValue);
+
+                showAlert('Optimasi berhasil! Lihat rekomendasi di bawah.', 'success');
+            } catch (error) {
+                showAlert('Terjadi kesalahan saat optimasi: ' + error.message, 'danger');
+                console.error(error);
+            }
+        });
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function () {
+            resetDisplays();
+        });
+    </script>
+</body>
+
+</html>
