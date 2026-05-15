@@ -49,19 +49,19 @@
                                     </li>
 
                                     <li class="nav-item">
-                                        <a class="nav-link active" href="knapsack-kalkulator.html">
+                                        <a class="nav-link" href="knapsack-kalkulator.html">
                                             Fitur Optimasi
                                         </a>
                                     </li>
 
                                     <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="#" role="button"
+                                        <a class="nav-link dropdown-toggle active" href="#" role="button"
                                             data-bs-toggle="dropdown" aria-expanded="false">
                                             Edukasi Investor
                                         </a>
                                         <ul class="dropdown-menu">
                                             <li>
-                                                <a class="dropdown-item" href="artikel-rdpu.html">
+                                                <a class="dropdown-item active" href="artikel-rdpu.html">
                                                     Mengenal RDPU
                                                 </a>
                                             </li>
@@ -115,10 +115,10 @@
                                 <a href="knapsack-kalkulator.html" class="nav-link">Fitur Optimasi</a>
                             </li>
 
-                            <li class="mobile-menu-list">
-                                <a href="javascript:void(0);">Edukasi Investor</a>
+                            <li class="mobile-menu-list active">
+                                <a href="javascript:void(0);" class="nav-link active">Edukasi Investor</a>
                                 <ul class="mobile-menu-items">
-                                    <li><a class="dropdown-item" href="artikel-rdpu.html">Mengenal RDPU</a></li>
+                                    <li><a class="dropdown-item active" href="artikel-rdpu.html">Mengenal RDPU</a></li>
                                     <li><a class="dropdown-item" href="panduan-knapsack.html">Cara Kerja Algoritma</a>
                                     </li>
                                 </ul>
@@ -166,19 +166,19 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link active" href="index.html">
+                            <a class="nav-link" href="knapsack-kalkulator.html">
                                 Fitur Optimasi
                             </a>
                         </li>
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
                                 Edukasi Investor
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a class="dropdown-item" href="artikel-rdpu.html">
+                                    <a class="dropdown-item active" href="artikel-rdpu.html">
                                         Mengenal RDPU
                                     </a>
                                 </li>
@@ -228,14 +228,14 @@
                     <a href="index.html" class="nav-link">Beranda</a>
                 </li>
 
-                <li class="mobile-menu-list active">
+                <li class="mobile-menu-list">
                     <a href="knapsack-kalkulator.html" class="nav-link">Fitur Optimasi</a>
                 </li>
 
-                <li class="mobile-menu-list">
-                    <a href="javascript:void(0);">Edukasi Investor</a>
+                <li class="mobile-menu-list active">
+                    <a href="javascript:void(0);" class="nav-link active">Edukasi Investor</a>
                     <ul class="mobile-menu-items">
-                        <li><a class="dropdown-item" href="artikel-rdpu.html">Mengenal RDPU</a></li>
+                        <li><a class="dropdown-item active" href="artikel-rdpu.html">Mengenal RDPU</a></li>
                         <li><a class="dropdown-item" href="panduan-knapsack.html">Cara Kerja Algoritma</a></li>
                     </ul>
                 </li>
@@ -269,33 +269,18 @@
                         <span class="badge bg-light text-primary mb-3 px-3 py-2 rounded-pill fw-bold">Panduan
                             Pemula</span>
                         <h1 class="display-4 fw-bolder mb-4">Mengenal Reksa Dana Pasar Uang (RDPU)</h1>
-                        <p class="lead mb-5 opacity-75">
-                            Langkah awal terbaik untuk perjalanan investasi Anda. Pahami bagaimana RDPU bekerja,
-                            mengapa ini instrumen paling aman, dan simulasikan potensi keuntungan Anda sekarang juga.
-                        </p>
                         <div class="d-flex gap-3">
                             <a href="#simulation-container"
                                 class="btn btn-primary btn-lg rounded-pill px-4 fw-bold shadow">
                                 Mulai Simulasi
                             </a>
-                            <a href="#about-rdpu" class="btn btn-outline-light btn-lg rounded-pill px-4 fw-bold">
-                                Pelajari Lebih Lanjut
-                            </a>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-6 col-md-12 text-center d-none d-lg-block">
-                    <!-- Placeholder untuk Ilustrasi Hero -->
-                    <img src="assets/images/hero/rdpu-illustration.svg" alt="Ilustrasi RDPU" class="img-fluid"
-                        style="max-height: 500px;">
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- ==========================================
-     SECTION 1: APA ITU RDPU?
-     ========================================== -->
     <section id="about-rdpu" class="py-5 bg-white">
         <div class="container my-5">
             <div class="row align-items-center g-5">
@@ -527,41 +512,6 @@
         </div>
     </section>
 
-    <!-- ==========================================
-     SECTION 4: SIMULATION CONTAINER WRAPPER
-     ========================================== -->
-    <section id="simulator-section" class="py-5 bg-dark text-white">
-        <div class="container my-5">
-            <div class="text-center mb-5">
-                <h6 class="text-warning fw-bold text-uppercase">Coba Sekarang</h6>
-                <h2 class="fw-bolder">Simulator Optimasi Portofolio RDPU</h2>
-                <p class="text-light opacity-75 mx-auto" style="max-width: 600px;">
-                    Gunakan algoritma Knapsack yang telah dibuat untuk mensimulasikan alokasi dana terbaik berdasarkan
-                    modal dan data RDPU yang Anda miliki.
-                </p>
-            </div>
-
-            <!-- Wadah untuk Script Simulator RDPU milik user -->
-            <div class="bg-white text-dark rounded-4 shadow-lg overflow-hidden">
-                <div id="simulation-container" class="container-fluid py-5 px-4">
-                    <!-- ==========================================
-                     Konten Simulator User di-inject ke sini
-                     (Form Modal, Tabel Data, Tabel Rekomendasi)
-                     ========================================== -->
-                    <div class="text-center py-5 text-muted border border-dashed rounded-3">
-                        <i class="ri-code-box-line fs-1"></i>
-                        <p class="mt-2 mb-0">
-                            <code>&lt;!-- Form dan Tabel Simulator RDPU ditempatkan di sini --&gt;</code>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==========================================
-     SECTION 5: CARA KERJA (TIMELINE)
-     ========================================== -->
     <section class="py-5 bg-light">
         <div class="container my-5">
             <div class="text-center mb-5">
