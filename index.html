@@ -15,6 +15,224 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
 
+
+    <style>
+        /* Icon-only visual replacement */
+        .icon-visual {
+            min-height: 320px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 18px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .icon-visual .main-icon,
+        .feature-icon-visual .main-icon,
+        .choose-icon-hero .main-icon,
+        .faq-icon-visual .main-icon {
+            width: 135px;
+            height: 135px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(12, 58, 48, 0.12);
+            color: #0c3a30;
+            font-size: 70px;
+            box-shadow: 0 18px 45px rgba(12, 58, 48, 0.12);
+        }
+
+        .icon-visual .icon-badges,
+        .feature-icon-visual .icon-badges,
+        .choose-icon-hero .icon-badges,
+        .faq-icon-visual .icon-badges {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .icon-visual .icon-badges span,
+        .feature-icon-visual .icon-badges span,
+        .choose-icon-hero .icon-badges span,
+        .faq-icon-visual .icon-badges span {
+            width: 58px;
+            height: 58px;
+            border-radius: 18px;
+            background: #ffffff;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: #0c3a30;
+            font-size: 28px;
+            box-shadow: 0 12px 30px rgba(12, 58, 48, 0.12);
+        }
+
+        .feature-icon-visual {
+            min-height: 520px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 20px;
+            padding: 45px 30px;
+            text-align: center;
+        }
+
+        .feature-icon-visual h3,
+        .choose-icon-hero h3,
+        .faq-icon-visual h3,
+        .works-icon-preview h3 {
+            color: #0c3a30;
+            margin-bottom: 0;
+        }
+
+        .feature-icon-visual p,
+        .choose-icon-hero p,
+        .faq-icon-visual p,
+        .works-icon-preview p {
+            color: #29594b;
+            max-width: 420px;
+            margin-bottom: 0;
+        }
+
+        .service-icon-top {
+            height: 220px;
+            border-radius: 30px;
+            background: linear-gradient(135deg, #edf1ee 0%, #9edd05 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0c3a30;
+            font-size: 84px;
+            margin-bottom: -45px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .about-icon-grid {
+            padding: 55px 35px;
+            min-height: 520px;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 22px;
+            align-content: center;
+        }
+
+        .about-icon-item {
+            min-height: 180px;
+            border-radius: 24px;
+            background: #edf1ee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 12px;
+            text-align: center;
+            color: #0c3a30;
+            padding: 20px;
+        }
+
+        .about-icon-item i {
+            font-size: 52px;
+            line-height: 1;
+        }
+
+        .about-icon-item span {
+            font-weight: 700;
+            color: #29594b;
+        }
+
+        .choose-icon-hero,
+        .faq-icon-visual {
+            min-height: 430px;
+            padding: 45px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 18px;
+            text-align: center;
+        }
+
+        .works-icon-preview {
+            min-height: 360px;
+            border-radius: 30px;
+            background: linear-gradient(135deg, #fffaeb 0%, #edf1ee 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            gap: 16px;
+            padding: 35px;
+            color: #0c3a30;
+        }
+
+        .works-icon-preview .main-icon {
+            width: 118px;
+            height: 118px;
+            border-radius: 35px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #9edd05;
+            color: #0c3a30;
+            font-size: 62px;
+            box-shadow: 0 18px 45px rgba(12, 58, 48, 0.16);
+        }
+
+        .heading-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: #9edd05;
+            color: #0c3a30;
+            font-size: 22px;
+            vertical-align: middle;
+            margin: 0 6px;
+        }
+
+        .footer-weight .get-touch li>i {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(158, 221, 5, 0.12);
+            color: #9edd05;
+            font-size: 20px;
+            margin-right: 12px;
+            flex: 0 0 auto;
+        }
+
+        @media (max-width: 767px) {
+            .about-icon-grid {
+                grid-template-columns: 1fr;
+                min-height: auto;
+            }
+
+            .service-icon-top {
+                height: 180px;
+                font-size: 64px;
+            }
+
+            .feature-icon-visual,
+            .choose-icon-hero,
+            .faq-icon-visual,
+            .works-icon-preview {
+                min-height: 300px;
+            }
+        }
+    </style>
+
     <!-- Title & Favicon -->
     <title>Optimasi RDPU dengan Dynamic Programming</title>
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
@@ -28,9 +246,6 @@
                 <div class="top-header-info">
                     <nav class="navbar navbar-expand-lg bg-color-ffffff" id="navbar">
                         <div class="container-fluid side-padding position-relative">
-                            <a class="navbar-brand logo-brand p-0" href="index.html">
-                                <img src="assets/images/logo-optirdpu.png" alt="OptiRDPU Logo">
-                            </a>
                             <a class="navbar-toggler" data-bs-toggle="offcanvas" href="#navbarOffcanvas" role="button"
                                 aria-controls="navbarOffcanvas">
                                 <span class="burger-menu">
@@ -114,9 +329,6 @@
                 <div class="mobile-navbar offcanvas offcanvas-end border-0" data-bs-backdrop="static" tabindex="-1"
                     id="navbarOffcanvas">
                     <div class="offcanvas-header">
-                        <a href="index.html" class="logo d-inline-block">
-                            <img src="assets/images/white-logo-optirdpu.png" alt="logo">
-                        </a>
                         <button type="button" class="close-btn bg-transparent position-relative lh-1 p-0 border-0"
                             data-bs-dismiss="offcanvas" aria-label="close">
                             <i class="ri-close-fill"></i>
@@ -172,9 +384,7 @@
     <div class="top-header-info">
         <nav class="navbar navbar-expand-lg bg-color-ffffff" id="navbar">
             <div class="container-fluid side-padding position-relative">
-                <a class="navbar-brand logo-brand p-0" href="index.html">
-                    <img src="assets/images/logo-optirdpu.png" alt="OptiRDPU Logo">
-                </a>
+
                 <a class="navbar-toggler" data-bs-toggle="offcanvas" href="#navbarOffcanvas" role="button"
                     aria-controls="navbarOffcanvas">
                     <span class="burger-menu">
@@ -259,9 +469,7 @@
     <div class="mobile-navbar offcanvas offcanvas-end border-0" data-bs-backdrop="static" tabindex="-1"
         id="navbarOffcanvas">
         <div class="offcanvas-header">
-            <a href="index.html" class="logo d-inline-block">
-                <img src="assets/images/white-logo-optirdpu.png" alt="logo">
-            </a>
+
             <button type="button" class="close-btn bg-transparent position-relative lh-1 p-0 border-0"
                 data-bs-dismiss="offcanvas" aria-label="close">
                 <i class="ri-close-fill"></i>
@@ -327,13 +535,13 @@
     </div>
 
     <div class="main-banner-area overflow-hidden position-relative"
-        style="background-image: url(assets/images/hero/hero-image-1.svg)">
+        style="background: linear-gradient(135deg, #edf1ee 0%, #fffaeb 48%, #e8f7d2 100%)">
         <div class="container-fluid side-padding pb-100">
             <div class="row align-items-center">
                 <div class="col-xl-5 col-lg-12" data-cues="slideInRight" data-duration="800">
                     <div class="main-banner-content">
                         <span class="sub-t">SELAMAT DATANG DI OPTIRDPU</span>
-                        <h1>Maksimalkan <span><img src="assets/images/svg/your.svg" alt="image"> Return</span>
+                        <h1>Maksimalkan <span><i class="ri-line-chart-line heading-icon"></i> Return</span>
                             Portofolio RDPU Anda</h1>
                     </div>
                 </div>
@@ -353,19 +561,28 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-xl-6 col-lg-12" data-cues="slideInRight" data-duration="800">
-                    <div class="features-image bg-color-9edd05 radius-30 position-relative">
-                        <img class="feature-image-1" src="assets/images/feature/feature-image-1.png" alt="image">
-                        <img class="feature-image-2 bounce" src="assets/images/feature/feature-image-2.png" alt="image">
-                        <img class="feature-shape-1 moveVertical" src="assets/images/shape/feature-shape-1.png"
-                            alt="image">
+                    <div class="features-image bg-color-9edd05 radius-30 position-relative feature-icon-visual">
+                        <div class="main-icon">
+                            <i class="ri-brain-line"></i>
+                        </div>
+                        <h3>Mesin Optimasi RDPU</h3>
+                        <p>Dynamic Programming membantu memilih kombinasi produk RDPU terbaik berdasarkan modal, minimum
+                            investasi, dan return.</p>
+                        <div class="icon-badges">
+                            <span><i class="ri-calculator-line"></i></span>
+                            <span><i class="ri-database-2-line"></i></span>
+                            <span><i class="ri-line-chart-line"></i></span>
+                            <span><i class="ri-shield-check-line"></i></span>
+                        </div>
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-12" data-cues="slideInLeft" data-duration="800">
                     <div class="features-content">
                         <div class="section-heading">
                             <span class="sub-title">CORE ENGINE</span>
-                            <h2 class="text-white">Teknologi <span><img src="assets/images/svg/lines-1.svg"
-                                        alt="image">Komputasi</span> Tingkat Lanjut</h2>
+                            <h2 class="text-white">Teknologi <span><i
+                                        class="ri-sparkling-2-line heading-icon"></i>Komputasi</span> Tingkat Lanjut
+                            </h2>
                             <p class="text-white">OptiRDPU dirancang dengan performa komputasi tinggi menggunakan Bun &
                                 Hono di sisi backend untuk latensi super rendah, melayani perhitungan matematis kompleks
                                 secara instan.</p>
@@ -404,7 +621,7 @@
                 <div class="col-xl-4 col-lg-12" data-cues="slideInLeft" data-duration="800">
                     <div class="section-heading position-relative mb-0">
                         <span class="sub-title">FITUR UTAMA KAMI</span>
-                        <h2>Optimasi <span><img src="assets/images/svg/lines-2.svg" alt="">Portofolio</span> Anda</h2>
+                        <h2>Optimasi <span><i class="ri-pie-chart-2-line heading-icon"></i>Portofolio</span> Anda</h2>
                         <p class="mb-5">Sistem rekomendasi alokasi RDPU otomatis menggunakan pendekatan algoritma
                             tingkat lanjut untuk investor ritel pemula maupun tingkat lanjut.</p>
 
@@ -427,8 +644,7 @@
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <div class="services-card position-relative">
-                                        <img class="radius-30" src="assets/images/service/service-image-5.jpg"
-                                            alt="image">
+                                        <div class="service-icon-top"><i class="ri-calculator-line"></i></div>
                                         <div class="services-card-body bg-color-fffaeb radius-30">
                                             <i class="flaticon-businessman-5 businessman"></i>
                                             <h3>
@@ -443,8 +659,7 @@
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="services-card position-relative">
-                                        <img class="radius-30" src="assets/images/service/service-image-6.jpg"
-                                            alt="image">
+                                        <div class="service-icon-top"><i class="ri-filter-3-line"></i></div>
                                         <div class="services-card-body bg-color-fffaeb radius-30">
                                             <i class="flaticon-browser-1 businessman"></i>
                                             <h3>
@@ -459,8 +674,7 @@
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="services-card position-relative">
-                                        <img class="radius-30" src="assets/images/service/service-image-7.jpg"
-                                            alt="image">
+                                        <div class="service-icon-top"><i class="ri-bar-chart-grouped-line"></i></div>
                                         <div class="services-card-body bg-color-fffaeb radius-30">
                                             <i class="flaticon-laptop-1 businessman"></i>
                                             <h3>
@@ -475,8 +689,7 @@
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="services-card position-relative">
-                                        <img class="radius-30" src="assets/images/service/service-image-5.jpg"
-                                            alt="image">
+                                        <div class="service-icon-top"><i class="ri-function-line"></i></div>
                                         <div class="services-card-body bg-color-fffaeb radius-30">
                                             <i class="flaticon-businessman-5 businessman"></i>
                                             <h3>
@@ -504,8 +717,8 @@
                     <div class="col-lg-7 col-md-7">
                         <div class="section-heading mb-0">
                             <span class="sub-title">TENTANG SISTEM KAMI</span>
-                            <h2 class="mb-0">Menggabungkan Matematika <span><img src="assets/images/svg/lines-3.svg"
-                                        alt="image">&</span> Investasi</h2>
+                            <h2 class="mb-0">Menggabungkan Matematika <span><i
+                                        class="ri-calculator-line heading-icon"></i>&</span> Investasi</h2>
                         </div>
                     </div>
                     <div class="col-lg-5 col-md-5">
@@ -633,9 +846,23 @@
                         </div>
                     </div>
                     <div class="col-lg-6" data-cues="slideInLeft" data-duration="800">
-                        <div class="about-image bg-color-ffffff radius-30">
-                            <img class="about-image-1" src="assets/images/about/about-image-1.jpg" alt="image">
-                            <img class="about-image-2" src="assets/images/about/about-image-1.png" alt="image">
+                        <div class="about-image bg-color-ffffff radius-30 about-icon-grid">
+                            <div class="about-icon-item">
+                                <i class="ri-funds-line"></i>
+                                <span>Return 1 Tahun</span>
+                            </div>
+                            <div class="about-icon-item">
+                                <i class="ri-wallet-3-line"></i>
+                                <span>Batas Modal</span>
+                            </div>
+                            <div class="about-icon-item">
+                                <i class="ri-stack-line"></i>
+                                <span>Minimum Investasi</span>
+                            </div>
+                            <div class="about-icon-item">
+                                <i class="ri-cpu-line"></i>
+                                <span>Optimasi DP</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -647,13 +874,17 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 col-md-12" data-cues="slideInRight" data-duration="800">
-                    <div class="choose-image position-relative">
-                        <img class="radius-30" src="assets/images/about/about-image-2.jpg" alt="image">
-                        <div class="paly-content">
-                            <a data-fslightbox="one" href="https://www.youtube.com/watch?v=Y7cpCDlRfV0"
-                                class="popup-btn">
-                                <i class="flaticon-play-buttton"></i>
-                            </a>
+                    <div class="choose-image position-relative bg-color-edf1ee radius-30 choose-icon-hero">
+                        <div class="main-icon">
+                            <i class="ri-line-chart-line"></i>
+                        </div>
+                        <h3>Keputusan Investasi Berbasis Data</h3>
+                        <p>Algoritma membantu investor memilih produk dengan logika matematis, bukan sekadar intuisi.
+                        </p>
+                        <div class="icon-badges">
+                            <span><i class="ri-money-dollar-circle-line"></i></span>
+                            <span><i class="ri-scales-3-line"></i></span>
+                            <span><i class="ri-checkbox-circle-line"></i></span>
                         </div>
                     </div>
                 </div>
@@ -661,7 +892,7 @@
                     <div class="why-choose-us-content">
                         <div class="section-heading mb-0">
                             <span class="sub-title">MENGAPA MEMILIH ALGORITMA KAMI</span>
-                            <h2>Tingkatkan <span><img src="assets/images/svg/lines-1.svg" alt="image">Return</span>
+                            <h2>Tingkatkan <span><i class="ri-line-chart-line heading-icon"></i>Return</span>
                                 Secara Rasional</h2>
                             <p class="mb-5">Pengambilan keputusan secara manual seringkali berujung pada alokasi
                                 suboptimal. Dengan OptiRDPU, kami mengubah rumitnya batas minimal pembelian dan variasi
@@ -713,8 +944,8 @@
                     <div class="col-lg-7 col-md-7" data-cues="slideInRight" data-duration="800">
                         <div class="section-heading mb-0">
                             <span class="sub-title text-white">CARA KERJA SISTEM</span>
-                            <h2 class="text-white mb-0">Komputasi Rumit, <span><img src="assets/images/svg/lines-1.svg"
-                                        alt="image">Penggunaan</span> Sangat Mudah</h2>
+                            <h2 class="text-white mb-0">Komputasi Rumit, <span><i
+                                        class="ri-sparkling-2-line heading-icon"></i>Penggunaan</span> Sangat Mudah</h2>
                         </div>
                     </div>
                     <div class="col-lg-5 col-md-5" data-cues="slideInLeft" data-duration="800">
@@ -762,8 +993,10 @@
                             aria-labelledby="crea-tab" tabindex="0">
                             <div class="row g-4" data-cues="slideInUp" data-duration="800">
                                 <div class="col-lg-6">
-                                    <div class="single-works-image">
-                                        <img class="radius-30" src="assets/images/about/about-image-3.jpg" alt="image">
+                                    <div class="single-works-image works-icon-preview">
+                                        <div class="main-icon"><i class="ri-wallet-3-line"></i></div>
+                                        <h3>Input Modal</h3>
+                                        <p>Masukkan nominal modal sebagai kapasitas awal algoritma.</p>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
@@ -783,8 +1016,10 @@
                             tabindex="0">
                             <div class="row" data-cues="slideInUp" data-duration="800">
                                 <div class="col-lg-6">
-                                    <div class="single-works-image">
-                                        <img class="radius-30" src="assets/images/about/about-image-10.jpg" alt="image">
+                                    <div class="single-works-image works-icon-preview">
+                                        <div class="main-icon"><i class="ri-cpu-line"></i></div>
+                                        <h3>Komputasi DP</h3>
+                                        <p>Sistem menghitung kombinasi berdasarkan bobot dan nilai return.</p>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
@@ -804,8 +1039,10 @@
                             tabindex="0">
                             <div class="row" data-cues="slideInUp" data-duration="500">
                                 <div class="col-lg-6">
-                                    <div class="single-works-image">
-                                        <img class="radius-30" src="assets/images/about/about-image-11.jpg" alt="image">
+                                    <div class="single-works-image works-icon-preview">
+                                        <div class="main-icon"><i class="ri-file-list-3-line"></i></div>
+                                        <h3>Rekomendasi Produk</h3>
+                                        <p>Hasil menampilkan daftar RDPU pilihan dan proyeksi return.</p>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
@@ -825,8 +1062,10 @@
                             tabindex="0">
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <div class="single-works-image">
-                                        <img class="radius-30" src="assets/images/about/about-image-12.jpg" alt="image">
+                                    <div class="single-works-image works-icon-preview">
+                                        <div class="main-icon"><i class="ri-shopping-bag-3-line"></i></div>
+                                        <h3>Eksekusi Pembelian</h3>
+                                        <p>Investor membeli produk rekomendasi pada platform investasi pilihan.</p>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
@@ -855,12 +1094,23 @@
                     <div class="question-card bg-color-9edd05 radius-30">
                         <div class="section-heading">
                             <span class="sub-title">FAQ</span>
-                            <h2>Pertanyaan <span><img src="assets/images/svg/lines-4.svg" alt="image">Sering</span>
+                            <h2>Pertanyaan <span><i class="ri-question-answer-line heading-icon"></i>Sering</span>
                                 Diajukan</h2>
                             <p>Temukan jawaban atas pertanyaan umum mengenai cara kerja sistem optimasi portofolio
                                 OptiRDPU kami.</p>
                         </div>
-                        <img class="radius-30" src="assets/images/blog/blog-image-4.jpg" alt="image">
+                        <div class="faq-icon-visual bg-color-ffffff radius-30">
+                            <div class="main-icon">
+                                <i class="ri-question-answer-line"></i>
+                            </div>
+                            <h3>FAQ OptiRDPU</h3>
+                            <p>Pertanyaan umum mengenai RDPU, Knapsack, sumber data, dan cara kerja sistem.</p>
+                            <div class="icon-badges">
+                                <span><i class="ri-question-line"></i></span>
+                                <span><i class="ri-book-open-line"></i></span>
+                                <span><i class="ri-shield-check-line"></i></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-12" data-cues="slideInLeft" data-duration="800">
@@ -1051,17 +1301,17 @@
 
                         <ul class="get-touch">
                             <li>
-                                <img src="assets/images/svg/map.svg" alt="image">
+                                <i class="ri-map-pin-line"></i>
                                 <span class="text-white"><b>Lokasi:</b></span>
                                 <a href="#" target="_blank">Bandung, Jawa Barat, Indonesia</a>
                             </li>
                             <li>
-                                <img class="phone" src="assets/images/svg/mail.svg" alt="image">
+                                <i class="ri-mail-line"></i>
                                 <span class="text-white"><b>Email:</b></span>
                                 <a href="mailto:support@optirdpu.id">support@optirdpu.id</a>
                             </li>
                             <li>
-                                <img class="phone" src="assets/images/svg/phone.svg" alt="image">
+                                <i class="ri-phone-line"></i>
                                 <span class="text-white"><b>Telepon:</b></span>
                                 <a href="tel:+628112345678">+62 811 2345 678</a>
                             </li>

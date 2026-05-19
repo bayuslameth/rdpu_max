@@ -18,6 +18,213 @@
     <!-- Title & Favicon -->
     <title>Optimasi RDPU dengan Dynamic Programming</title>
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+    <style>
+        .brand-icon-logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: #0c3a30;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .brand-icon-logo .logo-mark {
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, #0c3a30, #23a455);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-size: 26px;
+            box-shadow: 0 10px 25px rgba(12, 58, 48, 0.18);
+        }
+
+        .brand-icon-logo .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.05;
+        }
+
+        .brand-icon-logo .logo-text strong {
+            font-size: 20px;
+            color: #0c3a30;
+        }
+
+        .brand-icon-logo .logo-text span {
+            font-size: 12px;
+            color: #5e6f68;
+            font-weight: 600;
+        }
+
+        .brand-icon-logo.white {
+            color: #ffffff;
+        }
+
+        .brand-icon-logo.white .logo-mark {
+            background: #9edd05;
+            color: #0c3a30;
+            box-shadow: none;
+        }
+
+        .brand-icon-logo.white .logo-text strong,
+        .brand-icon-logo.white .logo-text span {
+            color: #ffffff;
+        }
+
+        .hero-rdpu-bg {
+            background:
+                radial-gradient(circle at 80% 20%, rgba(158, 221, 5, 0.28), transparent 28%),
+                radial-gradient(circle at 10% 80%, rgba(255, 255, 255, 0.14), transparent 26%),
+                linear-gradient(135deg, #0c3a30 0%, #12664f 48%, #0a2f28 100%);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-rdpu-bg::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+            background-size: 38px 38px;
+            pointer-events: none;
+        }
+
+        .hero-floating-icon {
+            position: absolute;
+            right: 8%;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 280px;
+            height: 280px;
+            border-radius: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #9edd05;
+            font-size: 120px;
+            backdrop-filter: blur(8px);
+        }
+
+        .visual-icon-card {
+            min-height: 320px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background:
+                radial-gradient(circle at top right, rgba(158, 221, 5, 0.28), transparent 35%),
+                linear-gradient(135deg, #edf1ee, #ffffff);
+        }
+
+        .visual-icon-card .main-visual-icon {
+            width: 180px;
+            height: 180px;
+            border-radius: 40px;
+            background: linear-gradient(135deg, #0c3a30, #23a455);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-size: 92px;
+            box-shadow: 0 24px 60px rgba(12, 58, 48, 0.2);
+        }
+
+        .process-number-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #ffffff;
+            box-shadow: 0 10px 30px rgba(12, 58, 48, 0.12);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: #0c3a30;
+            font-size: 34px;
+            margin: 0 auto 16px;
+        }
+
+        .footer-contact-icon {
+            width: 34px;
+            height: 34px;
+            min-width: 34px;
+            border-radius: 50%;
+            background: rgba(158, 221, 5, 0.16);
+            color: #9edd05;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            margin-right: 12px;
+        }
+
+        .copy-icon-logo {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto;
+            border-radius: 20px;
+            background: #9edd05;
+            color: #0c3a30;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 38px;
+            text-decoration: none;
+        }
+
+        .about-rdpu-icon-box {
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background:
+                radial-gradient(circle at 80% 20%, rgba(158, 221, 5, 0.3), transparent 30%),
+                linear-gradient(135deg, #ffffff, #edf1ee);
+            border-radius: 24px;
+        }
+
+        .about-rdpu-icon-box i {
+            width: 190px;
+            height: 190px;
+            border-radius: 45px;
+            background: linear-gradient(135deg, #0c3a30, #198754);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-size: 96px;
+            box-shadow: 0 25px 55px rgba(12, 58, 48, 0.18);
+        }
+
+        .section-heading span img,
+        .main-banner-content span img {
+            display: none !important;
+        }
+
+        @media (max-width: 1199px) {
+            .hero-floating-icon {
+                display: none;
+            }
+        }
+
+        @media (max-width: 575px) {
+            .brand-icon-logo .logo-text {
+                display: none;
+            }
+
+            .brand-icon-logo .logo-mark {
+                width: 42px;
+                height: 42px;
+                font-size: 22px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -28,9 +235,16 @@
                 <div class="top-header-info">
                     <nav class="navbar navbar-expand-lg bg-color-ffffff" id="navbar">
                         <div class="container-fluid side-padding position-relative">
-                            <a class="navbar-brand logo-brand p-0" href="index.html">
-                                <img src="assets/images/logo-optirdpu.png" alt="OptiRDPU Logo">
+                            <a class="navbar-brand logo-brand p-0 brand-icon-logo" href="index.html">
+                                <span class="logo-mark">
+                                    <i class="ri-line-chart-line"></i>
+                                </span>
+                                <span class="logo-text">
+                                    <strong>OptiRDPU</strong>
+                                    <span>DP Investment</span>
+                                </span>
                             </a>
+
                             <a class="navbar-toggler" data-bs-toggle="offcanvas" href="#navbarOffcanvas" role="button"
                                 aria-controls="navbarOffcanvas">
                                 <span class="burger-menu">
@@ -43,15 +257,11 @@
                             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                 <ul class="navbar-nav mx-auto">
                                     <li class="nav-item">
-                                        <a class="nav-link" href="index.html">
-                                            Beranda
-                                        </a>
+                                        <a class="nav-link" href="index.html">Beranda</a>
                                     </li>
 
                                     <li class="nav-item">
-                                        <a class="nav-link" href="knapsack-kalkulator.html">
-                                            Fitur Optimasi
-                                        </a>
+                                        <a class="nav-link" href="knapsack-kalkulator.html">Fitur Optimasi</a>
                                     </li>
 
                                     <li class="nav-item dropdown">
@@ -74,9 +284,7 @@
                                     </li>
 
                                     <li class="nav-item">
-                                        <a class="nav-link" href="kontak.html">
-                                            Kontak
-                                        </a>
+                                        <a class="nav-link" href="kontak.html">Kontak</a>
                                     </li>
                                 </ul>
                             </div>
@@ -84,8 +292,9 @@
                             <div class="others-options">
                                 <ul class="d-flex align-items-center ps-0 mb-0 list-unstyled">
                                     <li>
-                                        <a href="knapsack-kalkulator.html" class="default-btn">Mulai Optimasi <i
-                                                class="ri-line-chart-line"></i></a>
+                                        <a href="knapsack-kalkulator.html" class="default-btn">
+                                            Mulai Optimasi <i class="ri-line-chart-line"></i>
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
@@ -96,8 +305,14 @@
                 <div class="mobile-navbar offcanvas offcanvas-end border-0" data-bs-backdrop="static" tabindex="-1"
                     id="navbarOffcanvas">
                     <div class="offcanvas-header">
-                        <a href="index.html" class="logo d-inline-block">
-                            <img src="assets/images/white-logo-optirdpu.png" alt="logo">
+                        <a href="index.html" class="logo d-inline-block brand-icon-logo white">
+                            <span class="logo-mark">
+                                <i class="ri-line-chart-line"></i>
+                            </span>
+                            <span class="logo-text">
+                                <strong>OptiRDPU</strong>
+                                <span>DP Investment</span>
+                            </span>
                         </a>
                         <button type="button" class="close-btn bg-transparent position-relative lh-1 p-0 border-0"
                             data-bs-dismiss="offcanvas" aria-label="close">
@@ -118,8 +333,11 @@
                             <li class="mobile-menu-list active">
                                 <a href="javascript:void(0);" class="nav-link active">Edukasi Investor</a>
                                 <ul class="mobile-menu-items">
-                                    <li><a class="dropdown-item active" href="artikel-rdpu.html">Mengenal RDPU</a></li>
-                                    <li><a class="dropdown-item" href="panduan-knapsack.html">Cara Kerja Algoritma</a>
+                                    <li>
+                                        <a class="dropdown-item active" href="artikel-rdpu.html">Mengenal RDPU</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="panduan-knapsack.html">Cara Kerja Algoritma</a>
                                     </li>
                                 </ul>
                             </li>
@@ -132,8 +350,9 @@
                         <div class="others-options">
                             <ul class="d-flex align-items-center ps-0 mb-0 list-unstyled">
                                 <li>
-                                    <a href="knapsack-kalkulator.html" class="default-btn">Mulai Optimasi <i
-                                            class="ri-line-chart-line"></i></a>
+                                    <a href="knapsack-kalkulator.html" class="default-btn">
+                                        Mulai Optimasi <i class="ri-line-chart-line"></i>
+                                    </a>
                                 </li>
                             </ul>
                         </div>
@@ -148,6 +367,16 @@
     <div class="top-header-info">
         <nav class="navbar navbar-expand-lg bg-color-ffffff" id="navbar">
             <div class="container-fluid side-padding position-relative">
+                <a class="navbar-brand logo-brand p-0 brand-icon-logo" href="index.html">
+                    <span class="logo-mark">
+                        <i class="ri-line-chart-line"></i>
+                    </span>
+                    <span class="logo-text">
+                        <strong>OptiRDPU</strong>
+                        <span>DP Investment</span>
+                    </span>
+                </a>
+
                 <a class="navbar-toggler" data-bs-toggle="offcanvas" href="#navbarOffcanvas" role="button"
                     aria-controls="navbarOffcanvas">
                     <span class="burger-menu">
@@ -160,15 +389,11 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">
-                                Beranda
-                            </a>
+                            <a class="nav-link" href="index.html">Beranda</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="knapsack-kalkulator.html">
-                                Fitur Optimasi
-                            </a>
+                            <a class="nav-link" href="knapsack-kalkulator.html">Fitur Optimasi</a>
                         </li>
 
                         <li class="nav-item dropdown">
@@ -191,9 +416,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="kontak.html">
-                                Kontak
-                            </a>
+                            <a class="nav-link" href="kontak.html">Kontak</a>
                         </li>
                     </ul>
                 </div>
@@ -201,8 +424,9 @@
                 <div class="others-options">
                     <ul class="d-flex align-items-center ps-0 mb-0 list-unstyled">
                         <li>
-                            <a href="knapsack-kalkulator.html" class="default-btn">Mulai Optimasi <i
-                                    class="ri-line-chart-line"></i></a>
+                            <a href="knapsack-kalkulator.html" class="default-btn">
+                                Mulai Optimasi <i class="ri-line-chart-line"></i>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -213,8 +437,14 @@
     <div class="mobile-navbar offcanvas offcanvas-end border-0" data-bs-backdrop="static" tabindex="-1"
         id="navbarOffcanvas">
         <div class="offcanvas-header">
-            <a href="index.html" class="logo d-inline-block">
-                <img src="assets/images/white-logo-optirdpu.png" alt="logo">
+            <a href="index.html" class="logo d-inline-block brand-icon-logo white">
+                <span class="logo-mark">
+                    <i class="ri-line-chart-line"></i>
+                </span>
+                <span class="logo-text">
+                    <strong>OptiRDPU</strong>
+                    <span>DP Investment</span>
+                </span>
             </a>
             <button type="button" class="close-btn bg-transparent position-relative lh-1 p-0 border-0"
                 data-bs-dismiss="offcanvas" aria-label="close">
@@ -235,8 +465,12 @@
                 <li class="mobile-menu-list active">
                     <a href="javascript:void(0);" class="nav-link active">Edukasi Investor</a>
                     <ul class="mobile-menu-items">
-                        <li><a class="dropdown-item active" href="artikel-rdpu.html">Mengenal RDPU</a></li>
-                        <li><a class="dropdown-item" href="panduan-knapsack.html">Cara Kerja Algoritma</a></li>
+                        <li>
+                            <a class="dropdown-item active" href="artikel-rdpu.html">Mengenal RDPU</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="panduan-knapsack.html">Cara Kerja Algoritma</a>
+                        </li>
                     </ul>
                 </li>
 
@@ -247,27 +481,29 @@
 
             <div class="others-options">
                 <ul class="d-flex align-items-center ps-0 mb-0 list-unstyled">
-
                     <li>
-                        <a href="knapsack-kalkulator.html" class="default-btn">Mulai Optimasi <i
-                                class="ri-line-chart-line"></i></a>
+                        <a href="knapsack-kalkulator.html" class="default-btn">
+                            Mulai Optimasi <i class="ri-line-chart-line"></i>
+                        </a>
                     </li>
                 </ul>
             </div>
         </div>
     </div>
 
-    <!-- ==========================================
-     HERO SECTION (Diadaptasi dari kode Anda)
-     ========================================== -->
-    <div class="main-banner-area overflow-hidden position-relative"
-        style="background-image: url('assets/images/hero/hero-image-1.svg'); background-size: cover; background-position: center;">
-        <div class="container-fluid side-padding pb-100 pt-80" id="hero-container">
+    <!-- HERO SECTION -->
+    <div class="main-banner-area hero-rdpu-bg overflow-hidden position-relative">
+        <div class="hero-floating-icon">
+            <i class="ri-funds-line"></i>
+        </div>
+
+        <div class="container-fluid side-padding pb-100 pt-80 position-relative" id="hero-container">
             <div class="row align-items-center">
                 <div class="col-lg-6 col-md-12">
                     <div class="banner-content text-white">
-                        <span class="badge bg-light text-primary mb-3 px-3 py-2 rounded-pill fw-bold">Panduan
-                            Pemula</span>
+                        <span class="badge bg-light text-primary mb-3 px-3 py-2 rounded-pill fw-bold">
+                            Panduan Pemula
+                        </span>
                         <h1 class="display-4 fw-bolder mb-4">Mengenal Reksa Dana Pasar Uang (RDPU)</h1>
                         <div class="d-flex gap-3">
                             <a href="#simulation-container"
@@ -281,71 +517,65 @@
         </div>
     </div>
 
+    <!-- SECTION 1: ABOUT RDPU -->
     <section id="about-rdpu" class="py-5 bg-white">
         <div class="container my-5">
             <div class="row align-items-center g-5">
                 <div class="col-lg-6">
                     <div class="position-relative">
                         <div class="p-4 bg-light rounded-4 shadow-sm">
-                            <!-- Inline SVG Placeholder untuk Ilustrasi Dompet/Uang -->
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                                class="w-100 h-100 text-primary" style="max-height: 300px;">
-                                <rect x="2" y="6" width="20" height="12" rx="2"></rect>
-                                <circle cx="12" cy="12" r="2"></circle>
-                                <path d="M6 12h.01M18 12h.01"></path>
-                            </svg>
+                            <div class="about-rdpu-icon-box">
+                                <i class="ri-wallet-3-line"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="col-lg-6">
                     <div class="section-title mb-4">
                         <h6 class="text-primary fw-bold text-uppercase tracking-wide">Pengertian Dasar</h6>
                         <h2 class="fw-bolder mb-3">Apa Sebenarnya RDPU Itu?</h2>
                     </div>
+
                     <p class="text-muted mb-4" style="line-height: 1.8;">
                         <strong>Reksa Dana Pasar Uang (RDPU)</strong> adalah wadah investasi di mana dana dari berbagai
                         investor dikumpulkan oleh Manajer Investasi profesional. Dana tersebut kemudian diinvestasikan
                         secara eksklusif ke instrumen pasar uang berisiko rendah yang jatuh temponya kurang dari 1
                         tahun.
                     </p>
+
                     <ul class="list-unstyled mb-4">
                         <li class="d-flex align-items-start mb-3">
                             <div class="icon-box bg-primary bg-opacity-10 text-primary rounded-circle p-2 me-3">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <polyline points="20 6 9 17 4 12"></polyline>
-                                </svg>
+                                <i class="ri-check-line"></i>
                             </div>
                             <div>
                                 <h6 class="fw-bold mb-1">Deposito Berjangka</h6>
                                 <p class="text-muted small">Dana Anda disebar ke deposito berbagai bank ternama.</p>
                             </div>
                         </li>
+
                         <li class="d-flex align-items-start mb-3">
                             <div class="icon-box bg-primary bg-opacity-10 text-primary rounded-circle p-2 me-3">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <polyline points="20 6 9 17 4 12"></polyline>
-                                </svg>
+                                <i class="ri-check-line"></i>
                             </div>
                             <div>
                                 <h6 class="fw-bold mb-1">Obligasi Kurang dari 1 Tahun</h6>
-                                <p class="text-muted small">Surat utang negara atau korporasi dengan jatuh tempo jangka
-                                    pendek.</p>
+                                <p class="text-muted small">
+                                    Surat utang negara atau korporasi dengan jatuh tempo jangka pendek.
+                                </p>
                             </div>
                         </li>
+
                         <li class="d-flex align-items-start">
                             <div class="icon-box bg-primary bg-opacity-10 text-primary rounded-circle p-2 me-3">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <polyline points="20 6 9 17 4 12"></polyline>
-                                </svg>
+                                <i class="ri-check-line"></i>
                             </div>
                             <div>
                                 <h6 class="fw-bold mb-1">Sertifikat Bank Indonesia (SBI)</h6>
-                                <p class="text-muted small">Instrumen super aman yang diterbitkan langsung oleh bank
-                                    sentral.</p>
+                                <p class="text-muted small">
+                                    Instrumen super aman yang diterbitkan langsung oleh bank sentral.
+                                </p>
                             </div>
                         </li>
                     </ul>
@@ -354,96 +584,79 @@
         </div>
     </section>
 
-    <!-- ==========================================
-     SECTION 2: KEUNGGULAN RDPU
-     ========================================== -->
+    <!-- SECTION 2: KEUNGGULAN RDPU -->
     <section class="py-5 bg-light">
         <div class="container my-5">
             <div class="text-center mb-5">
                 <h6 class="text-primary fw-bold text-uppercase">Kenapa Memilih RDPU?</h6>
                 <h2 class="fw-bolder">Manfaat Utama Berinvestasi di RDPU</h2>
-                <p class="text-muted mx-auto" style="max-width: 600px;">RDPU dirancang khusus untuk menjaga nilai uang
-                    Anda tetap stabil sambil memberikan imbal hasil yang lebih baik daripada tabungan biasa.</p>
+                <p class="text-muted mx-auto" style="max-width: 600px;">
+                    RDPU dirancang khusus untuk menjaga nilai uang Anda tetap stabil sambil memberikan imbal hasil yang
+                    lebih baik daripada tabungan biasa.
+                </p>
             </div>
 
             <div class="row g-4">
-                <!-- Card 1 -->
                 <div class="col-md-6 col-lg-3">
                     <div class="card h-100 border-0 shadow-sm rounded-4 p-4 hover-lift transition-all">
-                        <div class="card-icon bg-success bg-opacity-10 text-success rounded-3 p-3 d-inline-block mb-4"
+                        <div class="card-icon bg-success bg-opacity-10 text-success rounded-3 p-3 d-inline-flex align-items-center justify-content-center mb-4"
                             style="width: 60px; height: 60px;">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                            </svg>
+                            <i class="ri-shield-check-line fs-2"></i>
                         </div>
                         <h5 class="fw-bold mb-3">Risiko Sangat Rendah</h5>
-                        <p class="text-muted small mb-0">Karena berinvestasi pada deposito dan obligasi jangka pendek,
-                            pergerakan harganya sangat stabil dan cenderung selalu naik (grafik garis lurus).</p>
-                    </div>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="col-md-6 col-lg-3">
-                    <div class="card h-100 border-0 shadow-sm rounded-4 p-4 hover-lift transition-all">
-                        <div class="card-icon bg-info bg-opacity-10 text-info rounded-3 p-3 d-inline-block mb-4"
-                            style="width: 60px; height: 60px;">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <polyline points="12 6 12 12 16 14"></polyline>
-                            </svg>
-                        </div>
-                        <h5 class="fw-bold mb-3">Sangat Likuid</h5>
-                        <p class="text-muted small mb-0">Dana bisa dicairkan kapan saja tanpa penalti atau denda. Proses
-                            pencairan biasanya memakan waktu maksimal 1-2 hari kerja (T+2) langsung ke rekening Anda.
+                        <p class="text-muted small mb-0">
+                            Karena berinvestasi pada deposito dan obligasi jangka pendek, pergerakan harganya sangat
+                            stabil dan cenderung selalu naik.
                         </p>
                     </div>
                 </div>
 
-                <!-- Card 3 -->
                 <div class="col-md-6 col-lg-3">
                     <div class="card h-100 border-0 shadow-sm rounded-4 p-4 hover-lift transition-all">
-                        <div class="card-icon bg-warning bg-opacity-10 text-warning rounded-3 p-3 d-inline-block mb-4"
+                        <div class="card-icon bg-info bg-opacity-10 text-info rounded-3 p-3 d-inline-flex align-items-center justify-content-center mb-4"
                             style="width: 60px; height: 60px;">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <line x1="12" y1="1" x2="12" y2="23"></line>
-                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-                            </svg>
+                            <i class="ri-time-line fs-2"></i>
                         </div>
-                        <h5 class="fw-bold mb-3">Modal Terjangkau</h5>
-                        <p class="text-muted small mb-0">Tidak perlu modal jutaan rupiah seperti deposito. Anda bisa
-                            mulai berinvestasi di RDPU hanya dengan modal mulai dari Rp 10.000 saja.</p>
+                        <h5 class="fw-bold mb-3">Sangat Likuid</h5>
+                        <p class="text-muted small mb-0">
+                            Dana bisa dicairkan kapan saja tanpa penalti atau denda. Proses pencairan biasanya memakan
+                            waktu maksimal 1-2 hari kerja.
+                        </p>
                     </div>
                 </div>
 
-                <!-- Card 4 -->
                 <div class="col-md-6 col-lg-3">
                     <div class="card h-100 border-0 shadow-sm rounded-4 p-4 hover-lift transition-all">
-                        <div class="card-icon bg-danger bg-opacity-10 text-danger rounded-3 p-3 d-inline-block mb-4"
+                        <div class="card-icon bg-warning bg-opacity-10 text-warning rounded-3 p-3 d-inline-flex align-items-center justify-content-center mb-4"
                             style="width: 60px; height: 60px;">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                                <polyline points="14 2 14 8 20 8"></polyline>
-                                <line x1="16" y1="13" x2="8" y2="13"></line>
-                                <line x1="16" y1="17" x2="8" y2="17"></line>
-                                <polyline points="10 9 9 9 8 9"></polyline>
-                            </svg>
+                            <i class="ri-money-dollar-circle-line fs-2"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Modal Terjangkau</h5>
+                        <p class="text-muted small mb-0">
+                            Tidak perlu modal jutaan rupiah seperti deposito. Anda bisa mulai berinvestasi di RDPU hanya
+                            dengan modal mulai dari Rp 10.000 saja.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm rounded-4 p-4 hover-lift transition-all">
+                        <div class="card-icon bg-danger bg-opacity-10 text-danger rounded-3 p-3 d-inline-flex align-items-center justify-content-center mb-4"
+                            style="width: 60px; height: 60px;">
+                            <i class="ri-file-list-3-line fs-2"></i>
                         </div>
                         <h5 class="fw-bold mb-3">Bukan Objek Pajak</h5>
-                        <p class="text-muted small mb-0">Keuntungan (return) dari RDPU bersih untuk Anda karena reksa
-                            dana bukan merupakan objek pajak, berbeda dengan bunga deposito yang dipotong pajak 20%.</p>
+                        <p class="text-muted small mb-0">
+                            Keuntungan dari RDPU bersih untuk Anda karena reksa dana bukan merupakan objek pajak,
+                            berbeda dengan bunga deposito yang dipotong pajak 20%.
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==========================================
-     SECTION 3: PERBANDINGAN INSTRUMEN
-     ========================================== -->
+    <!-- SECTION 3: PERBANDINGAN INSTRUMEN -->
     <section class="py-5 bg-white">
         <div class="container my-5">
             <div class="text-center mb-5">
@@ -458,7 +671,8 @@
                             <th scope="col" class="py-4 px-4 text-muted border-bottom">Fitur</th>
                             <th scope="col"
                                 class="py-4 px-4 text-center border-bottom border-start border-primary border-2 bg-primary bg-opacity-10 text-primary">
-                                RDPU</th>
+                                RDPU
+                            </th>
                             <th scope="col" class="py-4 px-4 text-center border-bottom">Deposito Bank</th>
                             <th scope="col" class="py-4 px-4 text-center border-bottom">Tabungan Biasa</th>
                         </tr>
@@ -468,7 +682,8 @@
                             <td class="py-3 px-4 fw-bold">Potensi Imbal Hasil</td>
                             <td
                                 class="py-3 px-4 text-center border-start border-primary border-2 bg-primary bg-opacity-10 fw-bold text-success">
-                                ± 4% - 6% per tahun</td>
+                                ± 4% - 6% per tahun
+                            </td>
                             <td class="py-3 px-4 text-center text-muted">± 3% - 5% per tahun</td>
                             <td class="py-3 px-4 text-center text-muted">± 0% - 1% per tahun</td>
                         </tr>
@@ -476,7 +691,8 @@
                             <td class="py-3 px-4 fw-bold">Modal Awal</td>
                             <td
                                 class="py-3 px-4 text-center border-start border-primary border-2 bg-primary bg-opacity-10">
-                                Mulai Rp 10.000</td>
+                                Mulai Rp 10.000
+                            </td>
                             <td class="py-3 px-4 text-center text-muted">Minimal Rp 1.000.000+</td>
                             <td class="py-3 px-4 text-center text-muted">Mulai Rp 50.000</td>
                         </tr>
@@ -484,8 +700,10 @@
                             <td class="py-3 px-4 fw-bold">Pencairan Dana</td>
                             <td
                                 class="py-3 px-4 text-center border-start border-primary border-2 bg-primary bg-opacity-10">
-                                Kapan saja (T+2)</td>
-                            <td class="py-3 px-4 text-center text-muted">Terkunci (Kena penalti jika dicairkan awal)
+                                Kapan saja (T+2)
+                            </td>
+                            <td class="py-3 px-4 text-center text-muted">
+                                Terkunci (kena penalti jika dicairkan awal)
                             </td>
                             <td class="py-3 px-4 text-center text-muted">Kapan saja (Real-time)</td>
                         </tr>
@@ -502,7 +720,8 @@
                             <td class="py-3 px-4 fw-bold">Biaya Admin Bulanan</td>
                             <td
                                 class="py-3 px-4 text-center border-start border-primary border-2 bg-primary border-bottom border-2 bg-opacity-10">
-                                Tidak Ada</td>
+                                Tidak Ada
+                            </td>
                             <td class="py-3 px-4 text-center text-muted">Tidak Ada</td>
                             <td class="py-3 px-4 text-center text-muted">Rp 10.000 - Rp 20.000</td>
                         </tr>
@@ -512,6 +731,7 @@
         </div>
     </section>
 
+    <!-- SECTION 4: ALUR PROSES -->
     <section class="py-5 bg-light">
         <div class="container my-5">
             <div class="text-center mb-5">
@@ -521,50 +741,49 @@
 
             <div class="row g-4 justify-content-center">
                 <div class="col-md-3 text-center position-relative">
-                    <div class="bg-white rounded-circle shadow-sm d-flex align-items-center justify-content-center mx-auto mb-3"
-                        style="width: 80px; height: 80px; z-index: 2; position: relative;">
-                        <h3 class="text-primary fw-bolder mb-0">1</h3>
+                    <div class="process-number-icon">
+                        <i class="ri-user-smile-line"></i>
                     </div>
                     <h5 class="fw-bold">Investor</h5>
-                    <p class="text-muted small">Anda menyetorkan dana (mulai Rp 10.000) melalui platform reksa dana.</p>
+                    <p class="text-muted small">
+                        Anda menyetorkan dana mulai Rp 10.000 melalui platform reksa dana.
+                    </p>
                 </div>
 
-                <div class="col-md-3 text-center position-relative d-none d-md-block">
-                    <div class="bg-white rounded-circle shadow-sm d-flex align-items-center justify-content-center mx-auto mb-3"
-                        style="width: 80px; height: 80px;">
-                        <h3 class="text-primary fw-bolder mb-0">2</h3>
+                <div class="col-md-3 text-center position-relative">
+                    <div class="process-number-icon">
+                        <i class="ri-briefcase-4-line"></i>
                     </div>
                     <h5 class="fw-bold">Manajer Investasi</h5>
-                    <p class="text-muted small">Profesional yang mengelola dan memecah dana Anda ke berbagai instrumen
-                        pasar uang.</p>
+                    <p class="text-muted small">
+                        Profesional yang mengelola dan memecah dana Anda ke berbagai instrumen pasar uang.
+                    </p>
                 </div>
 
-                <div class="col-md-3 text-center position-relative d-none d-md-block">
-                    <div class="bg-white rounded-circle shadow-sm d-flex align-items-center justify-content-center mx-auto mb-3"
-                        style="width: 80px; height: 80px;">
-                        <h3 class="text-primary fw-bolder mb-0">3</h3>
+                <div class="col-md-3 text-center position-relative">
+                    <div class="process-number-icon">
+                        <i class="ri-bank-line"></i>
                     </div>
                     <h5 class="fw-bold">Bank Kustodian</h5>
-                    <p class="text-muted small">Bank khusus yang bertugas menyimpan dan menjaga keamanan dana investasi
-                        Anda secara terpisah.</p>
+                    <p class="text-muted small">
+                        Bank khusus yang bertugas menyimpan dan menjaga keamanan dana investasi Anda secara terpisah.
+                    </p>
                 </div>
 
-                <div class="col-md-3 text-center position-relative d-none d-md-block">
-                    <div class="bg-white rounded-circle shadow-sm d-flex align-items-center justify-content-center mx-auto mb-3"
-                        style="width: 80px; height: 80px;">
-                        <h3 class="text-primary fw-bolder mb-0">4</h3>
+                <div class="col-md-3 text-center position-relative">
+                    <div class="process-number-icon">
+                        <i class="ri-line-chart-line"></i>
                     </div>
                     <h5 class="fw-bold">Keuntungan</h5>
-                    <p class="text-muted small">Nilai Aktiva Bersih (NAB) naik setiap hari kerja, saldo Anda otomatis
-                        bertambah.</p>
+                    <p class="text-muted small">
+                        Nilai Aktiva Bersih (NAB) naik setiap hari kerja, saldo Anda otomatis bertambah.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==========================================
-     SECTION 6: FAQ (Frequently Asked Questions)
-     ========================================== -->
+    <!-- SECTION 5: FAQ -->
     <section class="py-5 bg-white">
         <div class="container my-5">
             <div class="row justify-content-center">
@@ -575,7 +794,6 @@
                     </div>
 
                     <div class="accordion accordion-flush shadow-sm rounded-4 border overflow-hidden" id="faqAccordion">
-                        <!-- FAQ 1 -->
                         <div class="accordion-item border-bottom">
                             <h2 class="accordion-header" id="headingOne">
                                 <button class="accordion-button fw-bold bg-light" type="button"
@@ -589,14 +807,11 @@
                                 <div class="accordion-body text-muted">
                                     Sangat jarang. Grafik RDPU didesain untuk terus naik secara stabil layaknya tangga
                                     kecil. Mengingat instrumen yang digunakan adalah deposito dan obligasi jatuh tempo
-                                    di bawah 1 tahun, fluktuasi harganya sangat minimal. Risiko utamanya adalah gagal
-                                    bayar dari pihak bank/penerbit obligasi, yang secara historis probabilitasnya sangat
-                                    kecil untuk instrumen yang dipilih Manajer Investasi.
+                                    di bawah 1 tahun, fluktuasi harganya sangat minimal.
                                 </div>
                             </div>
                         </div>
 
-                        <!-- FAQ 2 -->
                         <div class="accordion-item border-bottom">
                             <h2 class="accordion-header" id="headingTwo">
                                 <button class="accordion-button collapsed fw-bold" type="button"
@@ -609,14 +824,12 @@
                                 data-bs-parent="#faqAccordion">
                                 <div class="accordion-body text-muted">
                                     RDPU sangat ideal bagi pemula yang baru belajar investasi, investor konservatif yang
-                                    tidak suka risiko, atau digunakan sebagai tempat menyimpan "Dana Darurat" dan
-                                    tabungan untuk tujuan jangka pendek (kurang dari 1 tahun) seperti rencana liburan,
-                                    bayar UKT semester depan, atau membeli gadget.
+                                    tidak suka risiko, atau digunakan sebagai tempat menyimpan dana darurat dan tabungan
+                                    untuk tujuan jangka pendek.
                                 </div>
                             </div>
                         </div>
 
-                        <!-- FAQ 3 -->
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingThree">
                                 <button class="accordion-button collapsed fw-bold" type="button"
@@ -629,9 +842,8 @@
                                 data-bs-parent="#faqAccordion">
                                 <div class="accordion-body text-muted">
                                     Secara aturan OJK, maksimal proses pencairan dana reksa dana adalah 7 hari kerja
-                                    (T+7). Namun pada praktiknya, pencairan RDPU biasanya memakan waktu hanya 1 hingga 2
-                                    hari kerja (T+1 atau T+2) untuk masuk ke rekening bank pribadi Anda, bahkan beberapa
-                                    platform menawarkan pencairan instan.
+                                    (T+7). Namun pada praktiknya, pencairan RDPU biasanya memakan waktu 1 hingga 2 hari
+                                    kerja.
                                 </div>
                             </div>
                         </div>
@@ -641,19 +853,19 @@
         </div>
     </section>
 
-    <!-- ==========================================
-     SECTION 7: CALL TO ACTION (CTA)
-     ========================================== -->
+    <!-- SECTION 6: CALL TO ACTION -->
     <section class="py-5">
         <div class="container my-4">
             <div class="bg-primary text-white rounded-5 p-5 text-center position-relative overflow-hidden shadow-lg">
-                <!-- Decorative Background Circle -->
                 <div class="position-absolute rounded-circle bg-white opacity-10"
                     style="width: 300px; height: 300px; top: -100px; right: -50px;"></div>
                 <div class="position-absolute rounded-circle bg-white opacity-10"
                     style="width: 200px; height: 200px; bottom: -50px; left: -50px;"></div>
 
                 <div class="position-relative z-index-1">
+                    <div class="mb-4">
+                        <i class="ri-rocket-2-line" style="font-size: 64px;"></i>
+                    </div>
                     <h2 class="fw-bolder mb-3">Siap Mengoptimalkan Uang Dingin Anda?</h2>
                     <p class="lead mb-4 opacity-75 mx-auto" style="max-width: 600px;">
                         Berhenti membiarkan uang Anda tergerus inflasi di tabungan biasa. Mulai simulasikan alokasi RDPU
@@ -668,6 +880,7 @@
         </div>
     </section>
 
+    <!-- FOOTER -->
     <div class="footer-area bg-color-0c3a30 pt-120">
         <div class="container">
             <div class="row" data-cues="slideInUp" data-duration="800">
@@ -676,8 +889,9 @@
                         <h2 class="text-white">Berlangganan Newsletter</h2>
                         <form class="footer-form position-relative">
                             <input type="email" class="form-control" placeholder="Masukkan Email Anda">
-                            <button type="submit" class="default-btn">Kirim <i
-                                    class="ri-arrow-right-up-line"></i></button>
+                            <button type="submit" class="default-btn">
+                                Kirim <i class="ri-arrow-right-up-line"></i>
+                            </button>
                         </form>
                         <ul class="social">
                             <li><span>Ikuti Kami:</span></li>
@@ -704,71 +918,65 @@
                         </ul>
                     </div>
                 </div>
+
                 <div class="col-xl-2 col-lg-4 col-md-6">
                     <div class="footer-weight part-two ps-5">
                         <h3 class="text-white">Tautan Cepat</h3>
-
                         <ul class="service-link">
-                            <li>
-                                <a href="tentang-kami.html">Tentang Kami</a>
-                            </li>
-                            <li>
-                                <a href="artikel-rdpu.html">Edukasi RDPU</a>
-                            </li>
-                            <li>
-                                <a href="panduan-knapsack.html">Cara Kerja Algoritma</a>
-                            </li>
-                            <li>
-                                <a href="sumber-data.html">Sumber Data</a>
-                            </li>
-                            <li>
-                                <a href="faq.html">Tanya Jawab (FAQ)</a>
-                            </li>
+                            <li><a href="tentang-kami.html">Tentang Kami</a></li>
+                            <li><a href="artikel-rdpu.html">Edukasi RDPU</a></li>
+                            <li><a href="panduan-knapsack.html">Cara Kerja Algoritma</a></li>
+                            <li><a href="sumber-data.html">Sumber Data</a></li>
+                            <li><a href="faq.html">Tanya Jawab (FAQ)</a></li>
                         </ul>
                     </div>
                 </div>
+
                 <div class="col-xl-3 col-lg-4 col-md-6">
                     <div class="footer-weight part-three ps-5">
                         <h3 class="text-white">Fitur Kami</h3>
-
                         <ul class="service-link">
-                            <li>
-                                <a href="knapsack-kalkulator.html">Kalkulator DP 0/1</a>
-                            </li>
-                            <li>
-                                <a href="top-k-filter.html">Filter Top K (Greedy)</a>
-                            </li>
-                            <li>
-                                <a href="simulasi-return.html">Simulasi Return</a>
-                            </li>
-                            <li>
-                                <a href="analisis-portofolio.html">Analisis Portofolio</a>
-                            </li>
-                            <li>
-                                <a href="dokumentasi-api.html">Integrasi API (Bun/Hono)</a>
-                            </li>
+                            <li><a href="knapsack-kalkulator.html">Kalkulator DP 0/1</a></li>
+                            <li><a href="top-k-filter.html">Filter Top K (Greedy)</a></li>
+                            <li><a href="simulasi-return.html">Simulasi Return</a></li>
+                            <li><a href="analisis-portofolio.html">Analisis Portofolio</a></li>
+                            <li><a href="dokumentasi-api.html">Integrasi API (Bun/Hono)</a></li>
                         </ul>
                     </div>
                 </div>
+
                 <div class="col-xl-3 col-lg-4 col-md-6">
                     <div class="footer-weight ps-5">
                         <h3 class="text-white">Hubungi Kami</h3>
-
                         <ul class="get-touch">
-                            <li>
-                                <img src="assets/images/svg/map.svg" alt="image">
-                                <span class="text-white"><b>Lokasi:</b></span>
-                                <a href="#" target="_blank">Bandung, Jawa Barat, Indonesia</a>
+                            <li class="d-flex align-items-start">
+                                <span class="footer-contact-icon">
+                                    <i class="ri-map-pin-2-line"></i>
+                                </span>
+                                <div>
+                                    <span class="text-white"><b>Lokasi:</b></span>
+                                    <a href="#" target="_blank">Bandung, Jawa Barat, Indonesia</a>
+                                </div>
                             </li>
-                            <li>
-                                <img class="phone" src="assets/images/svg/mail.svg" alt="image">
-                                <span class="text-white"><b>Email:</b></span>
-                                <a href="mailto:support@optirdpu.id">support@optirdpu.id</a>
+
+                            <li class="d-flex align-items-start">
+                                <span class="footer-contact-icon">
+                                    <i class="ri-mail-line"></i>
+                                </span>
+                                <div>
+                                    <span class="text-white"><b>Email:</b></span>
+                                    <a href="mailto:support@optirdpu.id">support@optirdpu.id</a>
+                                </div>
                             </li>
-                            <li>
-                                <img class="phone" src="assets/images/svg/phone.svg" alt="image">
-                                <span class="text-white"><b>Telepon:</b></span>
-                                <a href="tel:+628112345678">+62 811 2345 678</a>
+
+                            <li class="d-flex align-items-start">
+                                <span class="footer-contact-icon">
+                                    <i class="ri-phone-line"></i>
+                                </span>
+                                <div>
+                                    <span class="text-white"><b>Telepon:</b></span>
+                                    <a href="tel:+628112345678">+62 811 2345 678</a>
+                                </div>
                             </li>
                         </ul>
                     </div>
@@ -784,13 +992,15 @@
                     <div class="col-lg-4 col-md-6">
                         <p>© <span>OptiRDPU</span> 2026. Hak Cipta Dilindungi.</p>
                     </div>
+
                     <div class="col-lg-4 col-md-6">
                         <div class="copy-image" data-cues="zoomIn" data-duration="700">
-                            <a href="index.html" class="d-block">
-                                <img src="assets/images/white-logo-optirdpu.png" alt="OptiRDPU Logo">
+                            <a href="index.html" class="copy-icon-logo">
+                                <i class="ri-line-chart-line"></i>
                             </a>
                         </div>
                     </div>
+
                     <div class="col-lg-4 col-md-12">
                         <ul>
                             <li>
@@ -809,6 +1019,7 @@
     <div class="go-top">
         <i class="ri-arrow-up-fill"></i>
     </div>
+
     <!-- JS Files -->
     <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
